@@ -2,25 +2,91 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
+  <!-- Vérifier section Head -->
+  <!-- Faire Favicon -->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ma première page web</title>
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="#" defer></script>
-
 </head>
 
 <body>
   <div class="container">
     <header>
-      <p>
-        entête avec logo et navigation
-
-      </p>
+      <!-- Mettre display none -->
+      <h1>Site de Sherk</h1>
+      <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
+      <p>entête avec logo et navigation</p>
       <p>navigation responsive</p>
       <p>+/- separateur</p>
+      <nav>
+        <ul>
+          <!-- TODO est-ce que les liens du menu doivent -->
+          <!-- Faire ancre vers les sections -->
+          <li> <a href="#">menu 1</a> </li>
+          <li><a href="#">menu 2</a></li>
+          <li><a href="#">menu 3</a></li>
+          <li><a href="#">menu 4</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <section>
+        <p>Caroussel de photo</p>
+      </section>
+      <!-- +/- séparateur -->
+      <section>
+        <!-- TODO plus de détails sur les 2 prochaines section input/boutton vers quoi -->
+        <p>slogan / input / boutton</p>
+      </section>
+      <section>
+        <p>barbo / button</p>
+      </section>
+      <section>
+        <p>Gros texte important</p>
+        <p>text</p>
+        <articles>Truc 1</articles>
+        <articles>Truc 2</articles>
+        <articles>Truc 3</articles>
+        <!-- <articles> ou <aside></aside></articles> -->
+
+      </section>
+      <section>
+        <p>Grid de photos</p>
+      </section>
+      <section>statistiques</section>
+      <section>Des cards</section>
+      <section>contact us</section>
+    </main>
+
+    <footer>
+      <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
+
+      <nav>
+        <ul>
+          <!-- TODO est-ce que les liens du menu doivent -->
+          <li> <a href="#">About us</a> </li>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </nav>
+      <!-- +/- separateur -->
+      <p>Fait par: Isabelle Langlois</p>
+      <div>
+
+        <img src="img/icons/facebook.png" alt="Logo Facebook">
+        <img src="img/icons/linkedin.png" alt="Logo Linkedin">
+        <img src="img/icons/twitter.png" alt="Logo Twitter">
+        <img src="img/icons/instagram.jpg" alt="Logo Instagram">
+      </div>
+      <address href="tel:+15141234567">514-123-4567</address>
+      <address href="mailto:cegep@troisriviere.ca">cegep@troisriviere.ca</address>
+    </footer>
   </div>
 </body>
 
