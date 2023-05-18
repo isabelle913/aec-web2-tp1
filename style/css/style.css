@@ -26,11 +26,12 @@ main section {
   margin: 25px 0;
 }
 
+/*******  Section contact  *******/
 .contact .contact__form {
   background-color: #eeddac;
   padding: 10px;
   border-radius: 10px;
-  max-width: 40%;
+  max-width: 30%;
 }
 .contact .contact__form .form__group {
   margin: 20px 0;
@@ -97,6 +98,9 @@ footer .menu__links a {
 footer .menu__links a span {
   font-size: 20px;
 }
+footer .menu__links--span:hover {
+  border-bottom: 3px solid #91a644;
+}
 footer .separator {
   border-top: solid 3px #6a5243;
 }
@@ -116,13 +120,23 @@ footer .last-line__contact {
 }
 footer .last-line__contact--phone {
   font-size: 0.9rem;
+  margin-left: 0 !important;
 }
 footer .last-line__contact img {
   width: 15px;
   margin: 0 5px 0 10px;
 }
 
-@media screen and (max-width: 768px) {
+/*******  Media Query  *******/
+@media screen and (max-width: 1200px) {
+  .form__group {
+    flex-direction: column;
+  }
+  .form__group--width {
+    margin-right: 0 !important;
+  }
+}
+@media screen and (max-width: 850px) {
   footer .menu ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:wght@200;300;400;500;600;700;800&display=swap");
 
 $color-white: #fff;
-$color-green1: #91a644;
-$color-green2: #8db53e;
-$color-beige: #eeddac;
-$color-brown: #6a5243;
+$color-primary: #91a644;
+$color-secondary: #eeddac;
+$color-accent: #6a5243;
 $font-primary: "Nunito", sans-serif;
 $font-accent: "Lora", serif;
-$separator: solid 3px $color-brown;
+$separator: solid 3px $color-accent;
+$border-bottom-green: 3px solid $color-primary;
+$border-bottom-white: 3px solid $color-white;
 // TODO comment faire un rgbc avec une variable existante?
-// TODO ?? ne serait pas préférable de mettre primaire, ... Si je change la couleur primaire vert pour bleu!!!
 
 *,
 ::before,
@@ -40,13 +40,13 @@ main {
     // TODO ?? les margins ne s'additionnent pas mais se combinent?
   }
 }
-
+/*******  Section contact  *******/
 .contact {
   .contact__form {
-    background-color: $color-beige;
+    background-color: $color-secondary;
     padding: 10px;
     border-radius: 10px;
-    max-width: 40%;
+    max-width: 30%;
 
     .form__group {
       margin: 20px 0;
@@ -69,15 +69,15 @@ main {
       input,
       textarea {
         width: 100%;
-        background-color: $color-beige;
+        background-color: $color-secondary;
         padding: 4px;
         border: 0;
-        border-bottom: 3px solid $color-white;
+        border-bottom: $border-bottom-white;
         outline: none;
 
         &:hover {
           outline: none;
-          border-bottom: 3px solid $color-green1;
+          border-bottom: $border-bottom-green;
         }
       }
     }
@@ -90,7 +90,7 @@ main {
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
-        background-color: $color-green1;
+        background-color: $color-primary;
         color: $color-white;
       }
     }
@@ -113,7 +113,6 @@ footer {
     margin: 25px 0;
 
     &__links {
-      // TODO ajouter effet Hover sur les liens
       display: inline-block;
 
       a {
@@ -126,6 +125,10 @@ footer {
         span {
           font-size: 20px;
         }
+      }
+
+      &--span:hover {
+        border-bottom: $border-bottom-green;
       }
     }
   }
@@ -151,6 +154,7 @@ footer {
 
       &--phone {
         font-size: 0.9rem;
+        margin-left: 0 !important; //TODO ??
       }
 
       img {
@@ -161,11 +165,21 @@ footer {
   }
 }
 
-// TODO redimentionner les img icons dans Photoshop
-// trouver icone téléphone
+/*******  Media Query  *******/
 
 // TODO ?? vérifier comment placer media query
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1200px) {
+  .form__group {
+    flex-direction: column;
+
+    &--width {
+      margin-right: 0 !important; // TODO ??
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
   footer {
     .menu ul {
       display: grid;
