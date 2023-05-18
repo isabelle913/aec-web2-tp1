@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./style/css/normalize.css">
   <link rel="stylesheet" href="./style/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="#" defer></script>
+  <script src="./script/script.js" defer></script>
 </head>
 
 <body>
@@ -59,16 +59,48 @@
       </section>
       <section>statistiques</section>
       <section>Des cards</section>
-      <section>contact us</section>
+      <section class="contact">
+        <div class="contact__form">
+          <form class="" id="form" action="confirmation.html" onsubmit="return validateForm()" novalidate>
+            <h3>Contactez-nous</h3>
+            <p>Nous avons hâte d'avoir vos commentaires à propos de la famille de shrek</p>
+            <div class="form__group">
+              <div class=" form__group--width  input-control">
+                <label class="form__label form__label--hidden" for="LastName">Nom de famille</label>
+                <input type="text" id="LastName" name="LastName" placeholder="Nom de famille">
+                <div class="error-message"></div>
+              </div>
+              <div class="form__group--width input-control">
+                <label class="  form__label form__label--hidden" for="firstName">Prénom</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Prénom">
+                <div class="error-message"></div>
+              </div>
+            </div>
+            <div class="form__group input-control">
+              <label class="form__label form__label--hidden" for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email">
+              <div class="error-message"></div>
+            </div>
+            <div class="form__group input-control">
+              <label class="form__label form__label--hidden" for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Message"></textarea>
+              <div class="error-message"></div>
+            </div>
+            <div class="form__submit">
+              <input type="submit" value="Soumettre">
+            </div>
+            <!-- TODO terminer validation -->
+            <!-- TODO faire page html confirmation ou message dans cette page -->
+          </form>
+        </div>
+      </section>
+
     </main>
 
     <footer>
       <div class="container__logo">
         <img src="img/shrek-logo-200x100.png" alt="Logo Shrek" class="logo">
       </div>
-
-
-      <!-- Voir comment je vais mettre en responsive -->
 
       <nav class="menu">
         <ul>
@@ -98,7 +130,7 @@
 
           <address href="tel:+15141234567" class="last-line__contact--phone">514-123-4567</address>
           <img src="img/icons/mail.png" alt="">
-          <address href="mailto:cegep@troisriviere.ca">cegep@troisriviere.ca</address>
+          <address href="mailto:cegep@troisriviere.ca">cegep@troisrivieres.ca</address>
 
         </div>
       </div>
