@@ -2,14 +2,14 @@
 <html lang="fr">
 
 <head>
-  <!-- Vérifier section Head -->
-  <!-- Faire Favicon -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma première page web</title>
+  <meta name="Site de Shrek" content="Bienvenue aux amateurs de Shrek">
+  <title>Shrek</title>
   <link rel="stylesheet" href="./style/css/normalize.css">
   <link rel="stylesheet" href="./style/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="favicon-shrek-32.jpg">
   <script src="./script/script.js" defer></script>
 </head>
 
@@ -24,7 +24,7 @@
       <p>+/- separateur</p>
       <nav>
         <ul>
-          <!-- TODO est-ce que les liens du menu doivent -->
+
           <!-- Faire ancre vers les sections -->
           <li><a href="#">menu 1</a></li>
           <li><a href="#">menu 2</a></li>
@@ -39,7 +39,6 @@
       </section>
       <!-- +/- séparateur -->
       <section>
-        <!-- TODO plus de détails sur les 2 prochaines section input/boutton vers quoi -->
         <p>slogan / input / boutton</p>
       </section>
       <section>
@@ -105,12 +104,18 @@
       <nav class="menu">
         <ul>
           <!-- Prettier ignore -->
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>About us</a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>Feature</a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>Pricing</a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>Career</a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>FAQs</a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span>Privacy policy</a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">About us</span></a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">Feature</span></a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">Pricing</span></a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">Career</span></a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">FAQs</span></a></li>
+          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+                class="menu__links--span">Privacy policy</span></a></li>
         </ul>
       </nav>
 
@@ -121,15 +126,16 @@
         <div class="last-line__author">Fait par: Isabelle Langlois</div>
         <div class="last-line__social">
 
-          <img src="img/icons/facebook.png" alt="Logo Facebook">
-          <img src="img/icons/linkedin.png" alt="Logo Linkedin">
-          <img src="img/icons/twitter.png" alt="Logo Twitter">
-          <img src="img/icons/instagram.jpg" alt="Logo Instagram">
+          <img src="img/icons/facebook-25.png" alt="Logo Facebook">
+          <img src="img/icons/linkedin-25.png" alt="Logo Linkedin">
+          <img src="img/icons/twitter-25.png" alt="Logo Twitter">
+          <img src="img/icons/instagram-25.jpg" alt="Logo Instagram">
         </div>
         <div class="last-line__contact">
 
+          <img src="img/icons/telephone-25.png" alt="Icône téléphone" class="last-line__contact--phone">
           <address href="tel:+15141234567" class="last-line__contact--phone">514-123-4567</address>
-          <img src="img/icons/mail.png" alt="">
+          <img src="img/icons/mail-25.png" alt="Icône courriel">
           <address href="mailto:cegep@troisriviere.ca">cegep@troisrivieres.ca</address>
 
         </div>
