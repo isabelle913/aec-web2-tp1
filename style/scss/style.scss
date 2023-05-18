@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:wght@200;300;400;500;600;700;800&display=swap");
 
+$color-white: #fff;
 $color-green1: #91a644;
 $color-green2: #8db53e;
 $color-beige: #eeddac;
@@ -8,6 +9,7 @@ $font-primary: "Nunito", sans-serif;
 $font-accent: "Lora", serif;
 $separator: solid 3px $color-brown;
 // TODO comment faire un rgbc avec une variable existante?
+// TODO ?? ne serait pas préférable de mettre primaire, ... Si je change la couleur primaire vert pour bleu!!!
 
 *,
 ::before,
@@ -18,7 +20,7 @@ $separator: solid 3px $color-brown;
 }
 
 body {
-  background-color: #fff;
+  background-color: $color-white;
   font-family: $font-primary;
 }
 
@@ -32,9 +34,74 @@ body {
   width: 200px;
 }
 
+main {
+  section {
+    margin: 25px 0;
+    // TODO ?? les margins ne s'additionnent pas mais se combinent?
+  }
+}
+
+.contact {
+  .contact__form {
+    background-color: $color-beige;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 40%;
+
+    .form__group {
+      margin: 20px 0;
+      display: flex;
+
+      &--width {
+        flex-grow: 1;
+
+        &:nth-child(1) {
+          margin-right: 10px;
+        }
+      }
+
+      .form__label {
+        &--hidden {
+          display: none;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        background-color: $color-beige;
+        padding: 4px;
+        border: 0;
+        border-bottom: 3px solid $color-white;
+        outline: none;
+
+        &:hover {
+          outline: none;
+          border-bottom: 3px solid $color-green1;
+        }
+      }
+    }
+
+    .form__submit {
+      display: flex;
+      justify-content: end;
+
+      input {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: $color-green1;
+        color: $color-white;
+      }
+    }
+  }
+}
+
 /*******  footer  *******/
 
 footer {
+  margin-top: 25px;
+
   .container__logo {
     display: flex;
     justify-content: center;
@@ -43,11 +110,11 @@ footer {
   .menu {
     display: flex;
     justify-content: center;
-    margin: 25px 0; // voir si met variable
+    margin: 25px 0;
 
     &__links {
+      // TODO ajouter effet Hover sur les liens
       display: inline-block;
-      // margin: 0 10px;
 
       a {
         display: flex;
@@ -57,7 +124,6 @@ footer {
         color: rgb(41, 39, 39);
 
         span {
-          // text-decoration: none !important;
           font-size: 20px;
         }
       }
@@ -95,10 +161,10 @@ footer {
   }
 }
 
-// redimentionner les img icons
+// TODO redimentionner les img icons dans Photoshop
 // trouver icone téléphone
 
-// TODO vérifier comment placer media query
+// TODO ?? vérifier comment placer media query
 @media screen and (max-width: 768px) {
   footer {
     .menu ul {
@@ -107,7 +173,7 @@ footer {
     }
 
     .last-line {
-      display: grid !important; // TODO pourquoi je dois mettre !important
+      display: grid !important; // TODO ?? pourquoi je dois mettre !important
       grid-template-columns: 2fr 1fr;
 
       &__author {

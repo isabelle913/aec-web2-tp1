@@ -22,7 +22,59 @@ body {
   width: 200px;
 }
 
+main section {
+  margin: 25px 0;
+}
+
+.contact .contact__form {
+  background-color: #eeddac;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 40%;
+}
+.contact .contact__form .form__group {
+  margin: 20px 0;
+  display: flex;
+}
+.contact .contact__form .form__group--width {
+  flex-grow: 1;
+}
+.contact .contact__form .form__group--width:nth-child(1) {
+  margin-right: 10px;
+}
+.contact .contact__form .form__group .form__label--hidden {
+  display: none;
+}
+.contact .contact__form .form__group input,
+.contact .contact__form .form__group textarea {
+  width: 100%;
+  background-color: #eeddac;
+  padding: 4px;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  outline: none;
+}
+.contact .contact__form .form__group input:hover,
+.contact .contact__form .form__group textarea:hover {
+  outline: none;
+  border-bottom: 3px solid #91a644;
+}
+.contact .contact__form .form__submit {
+  display: flex;
+  justify-content: end;
+}
+.contact .contact__form .form__submit input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #91a644;
+  color: #fff;
+}
+
 /*******  footer  *******/
+footer {
+  margin-top: 25px;
+}
 footer .container__logo {
   display: flex;
   justify-content: center;
