@@ -26,6 +26,53 @@ main section {
   margin: 25px 0;
 }
 
+/*******  Section carousel  *******/
+.carousel ::-webkit-scrollbar {
+  display: none;
+}
+.carousel .carousel__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.carousel .carousel__container .slider {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem #6a5243;
+  border-radius: 0.5rem;
+  scrollbar-width: none;
+}
+.carousel .carousel__container .slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .carousel__container .slider__nav {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.carousel .carousel__container .slider__nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.carousel .carousel__container .slider__nav a:hover {
+  opacity: 1;
+}
+
 /*******  Section contact  *******/
 .contact .contact__form {
   background-color: #eeddac;

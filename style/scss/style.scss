@@ -40,6 +40,59 @@ main {
     // TODO ?? les margins ne s'additionnent pas mais se combinent?
   }
 }
+/*******  Section carousel  *******/
+
+.carousel {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel__container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .slider {
+      display: flex;
+      overflow-y: hidden;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      box-shadow: 0 1.5rem 3rem -0.75rem $color-accent;
+      border-radius: 0.5rem;
+      scrollbar-width: none;
+
+      img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+      }
+    }
+
+    .slider__nav {
+      display: flex;
+      column-gap: 1rem;
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 /*******  Section contact  *******/
 .contact {
   .contact__form {
