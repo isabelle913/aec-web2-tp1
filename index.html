@@ -14,152 +14,185 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <!-- Mettre display none -->
-      <h1>Site de Sherk</h1>
+
+  <header class="container">
+    <h1>Site de Sherk</h1>
+    <div class="container__logo">
       <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
-      <p>entête avec logo et navigation...</p>
-      <p>navigation responsive</p>
-      <p>+/- separateur</p>
-      <nav>
-        <ul>
+    </div>
 
-          <!-- Faire ancre vers les sections -->
-          <li><a href="#">menu 1</a></li>
-          <li><a href="#">menu 2</a></li>
-          <li><a href="#">menu 3</a></li>
-          <li><a href="#">menu 4</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="carousel">
-        <div class="carousel__container">
-          <div class="slider">
-            <img src="./img/carousel/shrek-et-chat-potte-1200x500.jpg" alt="Shrek et sa clic" id="img-1">
-            <img src="./img/carousel/shrek-roi-1200x500.webp" alt="Shrek avec une couronne de roi sur la tête"
-              id="img-2">
-            <img src="./img/carousel/fiona-1200x500.jpg" alt="La belle Fiona" id="img-3">
-            <img src="./img/carousel/shrek-famille1200x500.jpg" alt="Shrek et sa famille" id="img-4">
+    <nav class="menu">
+      <ul>
+        <li class="menu__links"><a href="#blog">Trucs</a></li>
+        <li class="menu__links"><a href="#gallery">Galerie</a></li>
+        <li class="menu__links"><a href="#stats">statistiques</a></li>
+        <li class="menu__links"><a href="#card">Des cards</a></li>
+        <li class="menu__links"><a href="#contact-us">Contactez-nous</a></li>
+      </ul>
+    </nav>
+    <!-- TODO Faire hamburger -->
+    <div class="menu__alt"> X</div>
+  </header>
+  <main>
+    <section class="carousel">
+      <div class="carousel__container">
+        <div class="slider">
+          <img src="./img/carousel/shrek-et-chat-potte-1200x500.jpg" alt="Shrek et sa clic" id="img-1">
+          <img src="./img/carousel/shrek-roi-1200x500.webp" alt="Shrek avec une couronne de roi sur la tête" id="img-2">
+          <img src="./img/carousel/fiona-1200x500.jpg" alt="La belle Fiona" id="img-3">
+          <img src="./img/carousel/shrek-famille1200x500.jpg" alt="Shrek et sa famille" id="img-4">
+        </div>
+        <div class="slider__nav">
+          <a href="#img-1"></a>
+          <a href="#img-2"></a>
+          <a href="#img-3"></a>
+          <a href="#img-4"></a>
+        </div>
+        <!-- TODO Trouver comment empêcher que les ancre ramène les images en haut du viewport -->
+        <!-- TODO Faire une animation pour que ça tourne tout seul -->
+        <!-- TODO lorsque resize plus petit que l'image que l'image se place au centre  -->
+      </div>
+    </section>
+
+
+    <section class=" container">
+      <div class="character ">
+
+        <p class="character__text">Lorem Corporis Neque ab ad adipisicing amet aperiam aut consectetur cumque dolor
+          elit. ipsum molestias perspiciatis porro quam qui? quibusdam sequi sit unde voluptatibus voluptatum.</p>
+
+        <!-- TODO faire validation -->
+        <form class="character__form" id="form" onsubmit="return validateForm()" novalidate>
+          <div class="form__group input-control">
+            <label class="  form__label form__label--hidden" for="favoriteCharacter">Votre personnage préféré</label>
+            <input type="text" id="favoriteCharacter" name="favoriteCharacter" placeholder="Votre personnage préféré">
+            <div class="error-message"></div>
           </div>
-          <div class="slider__nav">
-            <a href="#img-1"></a>
-            <a href="#img-2"></a>
-            <a href="#img-3"></a>
-            <a href="#img-4"></a>
+          <div class="form__submit">
+            <input type="submit" value="Soumettre">
           </div>
+        </form>
+      </div>
+    </section>
 
 
+
+    <section class="slogan">
+      <div class="container slogan__container">
+        <p class="slogan__text">C'est ma princesse, allez vous en chercher une autre!</p>
+        <div class="slogan__btn">
+          <p>Match <span class="slogan__btn--red">♡</span> princesse</p>
         </div>
 
-      </section>
+      </div>
+    </section>
+    <section id="blog">
+      <p>Gros texte important</p>
+      <p>text</p>
+      <articles>Truc 1</articles>
+      <articles>Truc 2</articles>
+      <articles>Truc 3</articles>
+      <!-- <articles> ou <aside></aside></articles> -->
 
-      <!-- +/- séparateur -->
-      <section>
-        <p>slogan / input / boutton</p>
-      </section>
-      <section>
-        <p>barbo / button</p>
-      </section>
-      <section>
-        <p>Gros texte important</p>
-        <p>text</p>
-        <articles>Truc 1</articles>
-        <articles>Truc 2</articles>
-        <articles>Truc 3</articles>
-        <!-- <articles> ou <aside></aside></articles> -->
+    </section>
+    <section id="gallery">
+      <p>Grid de photos</p>
+    </section>
+    <section id="stats">statistiques</section>
+    <section id="cards">Des cards</section>
 
-      </section>
-      <section>
-        <p>Grid de photos</p>
-      </section>
-      <section>statistiques</section>
-      <section>Des cards</section>
-      <section class="contact">
-        <div class="contact__form">
-          <form class="" id="form" action="confirmation.html" onsubmit="return validateForm()" novalidate>
-            <h3>Contactez-nous</h3>
-            <p>Nous avons hâte d'avoir vos commentaires à propos de la famille de shrek</p>
-            <div class="form__group">
-              <div class=" form__group--width  input-control">
-                <label class="form__label form__label--hidden" for="LastName">Nom de famille</label>
-                <input type="text" id="LastName" name="LastName" placeholder="Nom de famille">
-                <div class="error-message"></div>
-              </div>
-              <div class="form__group--width input-control">
-                <label class="  form__label form__label--hidden" for="firstName">Prénom</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Prénom">
-                <div class="error-message"></div>
-              </div>
-            </div>
-            <div class="form__group input-control">
-              <label class="form__label form__label--hidden" for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email">
-              <div class="error-message"></div>
-            </div>
-            <div class="form__group input-control">
-              <label class="form__label form__label--hidden" for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Message"></textarea>
-              <div class="error-message"></div>
-            </div>
-            <div class="form__submit">
-              <input type="submit" value="Soumettre">
-            </div>
-            <!-- TODO terminer validation -->
-            <!-- TODO faire page html confirmation ou message dans cette page -->
-          </form>
-        </div>
-      </section>
+    <section class="contact container" id="contact-us">
+      <div class="contact__iframe">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63269.820298437015!2d-71.1871256076971!3d45.50690928648346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb713c7693858b9%3A0xd2d9a11c5b28acb1!2sMar%C3%A9cage-des-Scots%20Regional%20Park!5e0!3m2!1sfr!2sca!4v1684494730514!5m2!1sfr!2sca"
+          width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- width="600" height="450" -->
 
-    </main>
-
-    <footer>
-      <div class="container__logo">
-        <img src="img/shrek-logo-200x100.png" alt="Logo Shrek" class="logo">
       </div>
 
-      <nav class="menu">
-        <ul>
-          <!-- Prettier ignore -->
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">About us</span></a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">Feature</span></a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">Pricing</span></a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">Career</span></a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">FAQs</span></a></li>
-          <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-                class="menu__links--span">Privacy policy</span></a></li>
-        </ul>
-      </nav>
-
-      <div class="separator"></div>
-      <div class="last-line">
-
-
-        <div class="last-line__author">Fait par: Isabelle Langlois</div>
-        <div class="last-line__social">
-
-          <img src="img/icons/facebook-25.png" alt="Logo Facebook">
-          <img src="img/icons/linkedin-25.png" alt="Logo Linkedin">
-          <img src="img/icons/twitter-25.png" alt="Logo Twitter">
-          <img src="img/icons/instagram-25.jpg" alt="Logo Instagram">
-        </div>
-        <div class="last-line__contact">
-
-          <img src="img/icons/telephone-25.png" alt="Icône téléphone" class="last-line__contact--phone">
-          <address href="tel:+15141234567" class="last-line__contact--phone">514-123-4567</address>
-          <img src="img/icons/mail-25.png" alt="Icône courriel">
-          <address href="mailto:cegep@troisriviere.ca">cegep@troisrivieres.ca</address>
-
-        </div>
+      <div class="contact__form">
+        <form class="" id="form" action="confirmation.html" onsubmit="return validateForm()" novalidate>
+          <h3>Contactez-nous</h3>
+          <p>Nous avons hâte d'avoir vos commentaires à propos de la famille de shrek</p>
+          <div class="form__group">
+            <div class=" form__group--width  input-control">
+              <label class="form__label form__label--hidden" for="LastName">Nom de famille</label>
+              <input type="text" id="LastName" name="LastName" placeholder="Nom de famille">
+              <div class="error-message"></div>
+            </div>
+            <div class="form__group--width input-control">
+              <label class="  form__label form__label--hidden" for="firstName">Prénom</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Prénom">
+              <div class="error-message"></div>
+            </div>
+          </div>
+          <div class="form__group input-control">
+            <label class="form__label form__label--hidden" for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <div class="error-message"></div>
+          </div>
+          <div class="form__group input-control">
+            <label class="form__label form__label--hidden" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Message"></textarea>
+            <div class="error-message"></div>
+          </div>
+          <div class="form__submit">
+            <input type="submit" value="Soumettre">
+          </div>
+          <!-- TODO terminer validation -->
+          <!-- TODO faire page html confirmation ou message dans cette page -->
+        </form>
       </div>
-    </footer>
-  </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="container__logo">
+      <img src="img/shrek-logo-200x100.png" alt="Logo Shrek" class="logo">
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <!-- Prettier ignore -->
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">About us</span></a></li>
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">Feature</span></a></li>
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">Pricing</span></a></li>
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">Career</span></a></li>
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">FAQs</span></a></li>
+        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
+              class="menu__links--span">Privacy policy</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="separator"></div>
+    <div class="last-line">
+
+
+      <div class="last-line__author">Fait par: Isabelle Langlois</div>
+      <div class="last-line__social">
+
+        <img src="img/icons/facebook-25.png" alt="Logo Facebook">
+        <img src="img/icons/linkedin-25.png" alt="Logo Linkedin">
+        <img src="img/icons/twitter-25.png" alt="Logo Twitter">
+        <img src="img/icons/instagram-25.jpg" alt="Logo Instagram">
+      </div>
+      <div class="last-line__contact">
+
+        <img src="img/icons/telephone-25.png" alt="Icône téléphone" class="last-line__contact--phone">
+        <address href="tel:+15141234567" class="last-line__contact--phone">514-123-4567</address>
+        <img src="img/icons/mail-25.png" alt="Icône courriel">
+        <address href="mailto:cegep@troisriviere.ca">cegep@troisrivieres.ca</address>
+
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

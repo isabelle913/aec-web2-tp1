@@ -10,6 +10,7 @@
 body {
   background-color: #fff;
   font-family: "Nunito", sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -20,6 +21,37 @@ body {
 
 .logo {
   width: 200px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 40px 0;
+}
+header h1 {
+  display: none;
+}
+header .menu {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+header .menu__links {
+  display: inline-block;
+  padding: 10px 10px;
+}
+header .menu__links a {
+  display: flex;
+  text-decoration-line: none;
+  align-items: flex-end;
+  color: rgb(41, 39, 39);
+  font-size: 20.8px;
+}
+header .menu__links a:hover {
+  border-bottom: 3px solid #91a644;
+}
+header .menu__alt {
+  display: none;
 }
 
 main section {
@@ -73,28 +105,104 @@ main section {
   opacity: 1;
 }
 
+/*******  Section character  *******/
+.character {
+  padding: 40px 0;
+}
+.character__text {
+  font-size: 19.2px;
+  text-align: center;
+}
+.character__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.character__form .form__group {
+  margin-right: 40px;
+  height: 42px;
+}
+.character__form .form__group .form__label--hidden {
+  display: none;
+}
+.character__form .form__group input {
+  width: 250px;
+  height: 42px;
+  padding: 4px;
+  border: 3px solid #eeddac;
+  border-radius: 5px;
+  outline: none;
+}
+.character__form .form__group input:hover {
+  outline: none;
+  border: 3px solid #91a644;
+}
+.character__form .form__submit {
+  display: flex;
+  justify-content: end;
+}
+.character__form .form__submit input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #91a644;
+  color: #fff;
+  font-size: 19.2px;
+  cursor: pointer;
+}
+
+/*******  Section slogan  *******/
+.slogan {
+  background-color: #eeddac;
+}
+.slogan .slogan__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  align-items: center;
+}
+.slogan .slogan__container .slogan__text {
+  font-family: lora;
+  font-size: 40px;
+  text-align: center;
+  margin-right: 40px;
+}
+.slogan .slogan__container .slogan__btn {
+  padding: 10px 20px;
+  background-color: #91a644;
+  font-size: 19.2px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.slogan .slogan__container .slogan__btn--red {
+  color: red;
+}
+
 /*******  Section contact  *******/
-.contact .contact__form {
+.contact__form {
   background-color: #eeddac;
   padding: 10px;
   border-radius: 10px;
   max-width: 30%;
 }
-.contact .contact__form .form__group {
+.contact__form .form__group {
   margin: 20px 0;
   display: flex;
 }
-.contact .contact__form .form__group--width {
+.contact__form .form__group--width {
   flex-grow: 1;
 }
-.contact .contact__form .form__group--width:nth-child(1) {
+.contact__form .form__group--width:nth-child(1) {
   margin-right: 10px;
 }
-.contact .contact__form .form__group .form__label--hidden {
+.contact__form .form__group .form__label--hidden {
   display: none;
 }
-.contact .contact__form .form__group input,
-.contact .contact__form .form__group textarea {
+.contact__form .form__group input,
+.contact__form .form__group textarea {
   width: 100%;
   background-color: #eeddac;
   padding: 4px;
@@ -102,21 +210,23 @@ main section {
   border-bottom: 3px solid #fff;
   outline: none;
 }
-.contact .contact__form .form__group input:hover,
-.contact .contact__form .form__group textarea:hover {
+.contact__form .form__group input:hover,
+.contact__form .form__group textarea:hover {
   outline: none;
   border-bottom: 3px solid #91a644;
 }
-.contact .contact__form .form__submit {
+.contact__form .form__submit {
   display: flex;
   justify-content: end;
 }
-.contact .contact__form .form__submit input {
+.contact__form .form__submit input {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #91a644;
   color: #fff;
+  font-size: 19.2px;
+  cursor: pointer;
 }
 
 /*******  footer  *******/
@@ -183,6 +293,20 @@ footer .last-line__contact img {
     margin-right: 0 !important;
   }
 }
+@media screen and (max-width: 950px) {
+  header .menu {
+    display: none;
+  }
+  header .menu__alt {
+    display: block;
+  }
+  .slogan__container {
+    flex-direction: column;
+  }
+  .slogan__container .slogan__btn {
+    margin-top: 40px;
+  }
+}
 @media screen and (max-width: 850px) {
   footer .menu ul {
     display: grid;
@@ -205,5 +329,13 @@ footer .last-line__contact img {
   footer .last-line__contact {
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 550px) {
+  .character__form {
+    flex-direction: column;
+  }
+  .character__form .form__group {
+    margin: 20px;
   }
 }

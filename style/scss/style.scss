@@ -4,12 +4,16 @@ $color-white: #fff;
 $color-primary: #91a644;
 $color-secondary: #eeddac;
 $color-accent: #6a5243;
+
 $font-primary: "Nunito", sans-serif;
 $font-accent: "Lora", serif;
+$font-size: 16px;
+
 $separator: solid 3px $color-accent;
-$border-bottom-green: 3px solid $color-primary;
-$border-bottom-white: 3px solid $color-white;
-// TODO comment faire un rgbc avec une variable existante?
+
+$border-primary: 3px solid $color-primary;
+$border-secondary: 3px solid $color-secondary;
+$border-white: 3px solid $color-white;
 
 *,
 ::before,
@@ -22,6 +26,7 @@ $border-bottom-white: 3px solid $color-white;
 body {
   background-color: $color-white;
   font-family: $font-primary;
+  font-size: $font-size;
 }
 
 .container {
@@ -32,6 +37,45 @@ body {
 
 .logo {
   width: 200px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 40px 0;
+
+  h1 {
+    display: none;
+  }
+
+  // TODO changer menu < 950px
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+
+    &__links {
+      display: inline-block;
+      padding: 10px 10px;
+
+      a {
+        display: flex;
+        text-decoration-line: none;
+        align-items: flex-end;
+        color: rgb(41, 39, 39);
+        font-size: $font-size * 1.3;
+        // scroll-behavior: smooth; TODO faire transition lente
+
+        &:hover {
+          border-bottom: $border-primary;
+        }
+      }
+    }
+  }
+  .menu__alt {
+    display: none;
+  }
 }
 
 main {
@@ -93,9 +137,102 @@ main {
   }
 }
 
+/*******  Section character  *******/
+
+.character {
+  padding: 40px 0;
+  &__text {
+    font-size: $font-size * 1.2;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    .form__group {
+      margin-right: 40px;
+      height: 42px;
+
+      .form__label {
+        &--hidden {
+          display: none;
+        }
+      }
+
+      input {
+        width: 250px;
+        height: 42px;
+        padding: 4px;
+        border: $border-secondary;
+        border-radius: 5px;
+        outline: none;
+
+        &:hover {
+          outline: none;
+          border: $border-primary;
+        }
+      }
+    }
+
+    .form__submit {
+      display: flex;
+      justify-content: end;
+
+      input {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: $font-size * 1.2;
+        cursor: pointer;
+        // TODO faire hover sur les bouttons
+      }
+    }
+    // TODO faire hover sur les bouttons
+  }
+}
+
+/*******  Section slogan  *******/
+.slogan {
+  background-color: $color-secondary;
+
+  .slogan__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    align-items: center;
+
+    .slogan__text {
+      font-family: lora;
+      font-size: $font-size * 2.5;
+      text-align: center;
+      margin-right: 40px;
+    }
+
+    .slogan__btn {
+      padding: 10px 20px;
+      background-color: $color-primary;
+      font-size: $font-size * 1.2;
+      color: $color-white;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+
+      &--red {
+        color: red;
+      }
+      // TODO faire hover sur les bouttons
+    }
+  }
+}
+
 /*******  Section contact  *******/
 .contact {
-  .contact__form {
+  &__form {
     background-color: $color-secondary;
     padding: 10px;
     border-radius: 10px;
@@ -125,12 +262,12 @@ main {
         background-color: $color-secondary;
         padding: 4px;
         border: 0;
-        border-bottom: $border-bottom-white;
+        border-bottom: $border-white;
         outline: none;
 
         &:hover {
           outline: none;
-          border-bottom: $border-bottom-green;
+          border-bottom: $border-primary;
         }
       }
     }
@@ -145,6 +282,9 @@ main {
         border-radius: 5px;
         background-color: $color-primary;
         color: $color-white;
+        font-size: $font-size * 1.2;
+        cursor: pointer;
+        // TODO faire hover sur les bouttons
       }
     }
   }
@@ -156,6 +296,7 @@ footer {
   margin-top: 25px;
 
   .container__logo {
+    // Voir si je laisse là ou remonte pour être utile a header
     display: flex;
     justify-content: center;
   }
@@ -181,7 +322,7 @@ footer {
       }
 
       &--span:hover {
-        border-bottom: $border-bottom-green;
+        border-bottom: $border-primary;
       }
     }
   }
@@ -232,6 +373,24 @@ footer {
   }
 }
 
+@media screen and (max-width: 950px) {
+  header {
+    .menu {
+      display: none;
+    }
+    .menu__alt {
+      display: block;
+    }
+  }
+  .slogan__container {
+    flex-direction: column;
+
+    .slogan__btn {
+      margin-top: 40px;
+    }
+  }
+}
+
 @media screen and (max-width: 850px) {
   footer {
     .menu ul {
@@ -257,6 +416,16 @@ footer {
         grid-column: 1/2;
         grid-row: 2/3;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .character__form {
+    flex-direction: column;
+
+    .form__group {
+      margin: 20px;
     }
   }
 }
