@@ -23,6 +23,11 @@ body {
   width: 200px;
 }
 
+section {
+  margin: 25px 0;
+}
+
+/*******  header  *******/
 header {
   display: flex;
   justify-content: space-between;
@@ -52,10 +57,6 @@ header .menu__links a:hover {
 }
 header .menu__alt {
   display: none;
-}
-
-section {
-  margin: 25px 0;
 }
 
 /*******  Section carousel  *******/
@@ -271,8 +272,62 @@ section {
 }
 
 /*******  section statistiques  *******/
-#stats {
-  background-color: pink;
+.stats {
+  background-color: #eeddac;
+  margin-top: 40px;
+}
+.stats .container {
+  display: flex;
+}
+.stats .container .left {
+  width: 40%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stats .container .left__slice-pie {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border-right: 200px solid #91a644;
+  border-top: 200px solid #6a5243;
+  border-bottom: 200px solid #6a5243;
+  border-left: 200px solid #6a5243;
+  transform: rotate(-35deg);
+}
+.stats .container .right {
+  width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stats .container .right__title {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+.stats .container .right__stats {
+  display: flex;
+  gap: 25%;
+  margin: 25px 0;
+}
+.stats .container .right__stats--big {
+  font-size: 32px;
+  font-weight: bold;
+}
+.stats .container .right__btn {
+  padding: 10px 20px;
+  background-color: #91a644;
+  font-size: 19.2px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 25px;
+}
+.stats .container .right__btn a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /*******  section movies  *******/
@@ -445,6 +500,19 @@ footer .last-line__contact img {
   .contact__form .form__group--row .form__group--margin-top {
     margin-top: 20px;
   }
+  #slice-pie {
+    transform: scale(0.9) rotate(-45deg);
+  }
+  .movies__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #slice-pie {
+    transform: scale(0.8) rotate(-55deg);
+  }
 }
 @media screen and (max-width: 1024px) {
   .gallery__container {
@@ -502,6 +570,9 @@ footer .last-line__contact img {
   .contact__form .form__group--row .form__group--width {
     flex-grow: 1;
   }
+  #slice-pie {
+    transform: scale(0.7) rotate(-65deg);
+  }
 }
 @media screen and (max-width: 950px) {
   header .menu {
@@ -540,6 +611,16 @@ footer .last-line__contact img {
     grid-column: 1/2;
     grid-row: 2/3;
   }
+  #slice-pie {
+    transform: scale(0.6) rotate(-75deg);
+  }
+  .blogs__container {
+    flex-direction: column;
+  }
+  .movies__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 @media screen and (max-width: 720px) {
   .gallery__container {
@@ -553,6 +634,15 @@ footer .last-line__contact img {
   .gallery__container .gallery__ane img {
     max-width: 50%;
     padding-left: 10%;
+  }
+  #slice-pie {
+    display: none;
+  }
+  .stats .container .left {
+    width: 0%;
+  }
+  .stats .container .right {
+    width: 100%;
   }
 }
 @media screen and (max-width: 650px) {
