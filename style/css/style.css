@@ -41,21 +41,19 @@ header .menu {
   justify-content: center;
   margin: 25px 0;
 }
-header .menu__links {
+header .menu__link {
   display: inline-block;
   padding: 10px 10px;
 }
-header .menu__links a {
-  display: flex;
+header .menu__link a {
   text-decoration-line: none;
-  align-items: flex-end;
   color: rgb(41, 39, 39);
   font-size: 20.8px;
 }
-header .menu__links a:hover {
+header .menu__link a:hover {
   border-bottom: 3px solid #91a644;
 }
-header .menu__alt {
+header .menu__link a img {
   display: none;
 }
 
@@ -456,7 +454,7 @@ footer .menu__links a {
   padding: 10px 10px;
   color: rgb(41, 39, 39);
 }
-footer .menu__links a span {
+footer .menu__links span {
   font-size: 20px;
 }
 footer .menu__links--span:hover {
@@ -575,11 +573,39 @@ footer .last-line__contact img {
   }
 }
 @media screen and (max-width: 950px) {
+  header {
+    flex-direction: column;
+  }
+  header .container__logo {
+    text-align: center;
+    margin-top: 20px;
+  }
   header .menu {
+    margin: 40px 0;
+  }
+  header .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  header .menu__link {
+    background-color: #eeddac;
+    flex-grow: 1;
+    margin: 0 10px;
+    border-radius: 10px;
+  }
+  header .menu__link:hover {
+    flex-grow: 2;
+    background-color: #91a644;
+  }
+  header .menu .link__text {
     display: none;
   }
-  header .menu__alt {
+  header .menu .link__img {
     display: block;
+    width: 30px;
+    margin: 0 auto;
   }
   .slogan__container {
     flex-direction: column;
@@ -657,4 +683,4 @@ footer .last-line__contact img {
   .character__form .form__group {
     margin: 20px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
