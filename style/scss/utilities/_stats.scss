@@ -1,0 +1,103 @@
+@use "variables";
+
+.stats {
+  background-color: variables.$color-secondary;
+  margin-top: 40px;
+
+  .container {
+    display: flex;
+    .left {
+      width: 40%;
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__slice-pie {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border-right: 200px solid variables.$color-primary;
+        border-top: 200px solid variables.$color-accent;
+        border-bottom: 200px solid variables.$color-accent;
+        border-left: 200px solid variables.$color-accent;
+        transform: rotate(-35deg);
+      }
+    }
+
+    .right {
+      width: 60%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__title {
+        margin-bottom: 25px;
+        font-size: variables.$font-size * 2;
+      }
+
+      &__stats {
+        display: flex;
+        gap: 25%;
+        margin: 25px 0;
+
+        &--big {
+          font-size: variables.$font-size * 2;
+          font-weight: bold;
+        }
+      }
+
+      &__btn {
+        padding: 10px 20px;
+        background-color: variables.$color-primary;
+        font-size: variables.$font-size * 1.2;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: flex-end;
+        margin-top: 25px;
+
+        a {
+          color: variables.$color-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #slice-pie {
+    transform: scale(0.9) rotate(-45deg);
+  }
+}
+@media screen and (max-width: 1150px) {
+  #slice-pie {
+    transform: scale(0.8) rotate(-55deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #slice-pie {
+    transform: scale(0.7) rotate(-65deg);
+  }
+}
+@media screen and (max-width: 850px) {
+  #slice-pie {
+    transform: scale(0.6) rotate(-75deg);
+  }
+}
+@media screen and (max-width: 720px) {
+  .stats {
+    .container {
+      .left {
+        width: 0%;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+  }
+  #slice-pie {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+@use "variables";
+@import "../mixins/flexAlign";
+
+/*******  section movies  *******/
+.movies {
+  padding: 40px 0;
+
+  &__title {
+    text-align: center;
+    font-size: variables.$font-size * 2;
+    padding: 25px 0;
+  }
+
+  &__description {
+    width: 60%;
+    font-size: variables.$font-size;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  &__container {
+    @include flexAlign(space-between);
+    //display: flex;
+    //justify-content: space-between;
+
+    .movie {
+      flex-basis: 20%;
+      display: flex;
+      box-shadow: 0 1.5rem 3rem -0.75rem variables.$color-accent;
+      border-radius: 0.5rem;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px 10px 10px;
+      row-gap: 20px;
+
+      &__title {
+        text-align: center;
+
+        &--caption {
+          font-size: variables.$font-size * 0.8;
+        }
+      }
+
+      & &__text {
+        text-align: justify;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+  .movies {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .movies {
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}

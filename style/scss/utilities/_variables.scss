@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:wght@200;300;400;500;600;700;800&display=swap");
+
+$color-white: #fff;
+$color-primary: #91a644;
+$color-secondary: #eeddac;
+$color-accent: #6a5243;
+
+$font-primary: "Nunito", sans-serif;
+$font-accent: "Lora", serif;
+$font-size: 16px;
+
+$separator: solid 3px $color-accent;
+
+$border-primary: 3px solid $color-primary;
+$border-secondary: 3px solid $color-secondary;
+$border-white: 3px solid $color-white;
+
+// TODO box-shadow carousel ligne 20

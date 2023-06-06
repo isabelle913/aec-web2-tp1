@@ -1,0 +1,67 @@
+@use "variables";
+
+.character {
+  padding: 40px 0;
+  &__text {
+    font-size: variables.$font-size * 1.2;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    .form__group {
+      margin-right: 40px;
+      height: 42px;
+
+      .form__label {
+        &--hidden {
+          display: none;
+        }
+      }
+
+      input {
+        width: 250px;
+        height: 42px;
+        padding: 4px;
+        border: variables.$border-secondary;
+        border-radius: 5px;
+        outline: none;
+
+        &:hover {
+          outline: none;
+          border: variables.$border-primary;
+        }
+      }
+    }
+
+    .form__submit {
+      display: flex;
+      justify-content: end;
+
+      input {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: variables.$color-primary;
+        color: variables.$color-white;
+        font-size: variables.$font-size * 1.2;
+        cursor: pointer;
+        // TODO faire hover sur les bouttons
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .character__form {
+    flex-direction: column;
+
+    .form__group {
+      margin: 20px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "variables";
+
+.slogan {
+  background-color: variables.$color-secondary;
+
+  .slogan__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    align-items: center;
+
+    .slogan__text {
+      font-family: lora;
+      font-size: variables.$font-size * 2.5;
+      text-align: center;
+      margin-right: 40px;
+    }
+
+    .slogan__btn {
+      padding: 10px 20px;
+      background-color: variables.$color-primary;
+      font-size: variables.$font-size * 1.2;
+      color: variables.$color-white;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+
+      &--red {
+        color: red;
+      }
+      // TODO faire hover sur les bouttons
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .slogan__container {
+    flex-direction: column;
+
+    .slogan__btn {
+      margin-top: 40px;
+    }
+  }
+}
