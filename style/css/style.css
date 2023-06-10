@@ -153,7 +153,7 @@ body {
   width: 200px;
 }
 
-.slogan .slogan__container .slogan__btn, .character__form .form__submit input {
+.stats .container .right__btn, .slogan .slogan__container .slogan__btn, .character__form .form__submit input {
   padding: 10px 20px;
   border: none;
   border-radius: 0.5rem;
@@ -162,7 +162,7 @@ body {
   font-size: 19.2px;
   cursor: pointer;
 }
-.slogan .slogan__container .slogan__btn:hover, .character__form .form__submit input:hover {
+.stats .container .right__btn:hover, .slogan .slogan__container .slogan__btn:hover, .character__form .form__submit input:hover {
   color: black;
   box-shadow: 0 1rem 1rem -0.75rem #6a5243;
   transform: scale(1.1);
@@ -682,11 +682,11 @@ footer .last-line__contact img {
   display: flex;
 }
 .stats .container .left {
-  width: 40%;
-  margin: 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40%;
+  margin: 40px auto;
 }
 .stats .container .left__slice-pie {
   width: 400px;
@@ -703,6 +703,7 @@ footer .last-line__contact img {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: strech;
   justify-content: center;
 }
 .stats .container .right__title {
@@ -719,17 +720,15 @@ footer .last-line__contact img {
   font-weight: bold;
 }
 .stats .container .right__btn {
-  padding: 10px 20px;
-  background-color: #91a644;
-  font-size: 19.2px;
-  border-radius: 0.5rem;
-  cursor: pointer;
   align-self: flex-end;
   margin-top: 25px;
 }
 .stats .container .right__btn a {
   color: #fff;
   text-decoration: none;
+}
+.stats .container .right__btn a:hover {
+  color: black;
 }
 
 @media screen and (max-width: 1300px) {
@@ -758,6 +757,7 @@ footer .last-line__contact img {
   }
   .stats .container .right {
     width: 100%;
+    padding: 20px;
   }
   #slice-pie {
     display: none;

@@ -1,4 +1,7 @@
 @use "variables";
+@use "general";
+@import "../mixins/flexRow";
+@import "../mixins/flexColumn";
 
 .stats {
   background-color: variables.$color-secondary;
@@ -7,11 +10,9 @@
   .container {
     display: flex;
     .left {
+      @include flexRow(center, center);
       width: 40%;
       margin: 40px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
       &__slice-pie {
         width: 400px;
@@ -28,9 +29,7 @@
     .right {
       width: 60%;
       padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include flexColumn(strech, center);
 
       &__title {
         margin-bottom: 25px;
@@ -49,17 +48,16 @@
       }
 
       &__btn {
-        padding: 10px 20px;
-        background-color: variables.$color-primary;
-        font-size: variables.$font-size * 1.2;
-        border-radius: variables.$border-radius-base;
-        cursor: pointer;
+        @extend %btn-base;
         align-self: flex-end;
         margin-top: 25px;
 
         a {
           color: variables.$color-white;
           text-decoration: none;
+        }
+        a:hover {
+          color: black;
         }
       }
     }
@@ -94,6 +92,7 @@
       }
       .right {
         width: 100%;
+        padding: 20px;
       }
     }
   }
