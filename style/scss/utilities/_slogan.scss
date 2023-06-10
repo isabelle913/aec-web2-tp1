@@ -21,7 +21,7 @@
       background-color: variables.$color-primary;
       font-size: variables.$font-size * 1.2;
       color: variables.$color-white;
-      border-radius: 5px;
+      border-radius: variables.$border-radius-base;
       cursor: pointer;
       flex-shrink: 0;
 

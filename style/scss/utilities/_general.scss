@@ -7,9 +7,9 @@
   margin: 0px;
   padding: 0px;
 }
-//html {
-//scroll-behavior: smooth;
-//}
+// html { brise le scroll de mon carousel
+//   scroll-behavior: smooth;
+// }
 
 body {
   background-color: variables.$color-white;
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  //width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }

@@ -1,5 +1,6 @@
 @use "variables";
 @import "../mixins/flexRow";
+@import "../mixins/boxShadow";
 
 /*******  section movies  *******/
 .movies {
@@ -27,8 +28,8 @@
     .movie {
       flex-basis: 20%;
       display: flex;
-      box-shadow: 0 1.5rem 3rem -0.75rem variables.$color-accent;
-      border-radius: 0.5rem;
+      @include boxShadow(0, 1.5rem, 3rem, -0.75rem);
+      border-radius: variables.$border-radius-base;
       flex-direction: column;
       align-items: center;
       padding: 20px 10px 10px 10px;

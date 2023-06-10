@@ -41,7 +41,7 @@
 
   img {
     width: 100%;
-    border-radius: 2px;
+    border-radius: variables.$border-radius-base / 2;
   }
 }
 

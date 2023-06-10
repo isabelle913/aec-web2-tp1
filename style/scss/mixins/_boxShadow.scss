@@ -1,0 +1,11 @@
+@use "../utilities/variables";
+
+@mixin boxShadow(
+  $h-offset: 0,
+  $v-offset: 0,
+  $blur: 0,
+  $spread: 0,
+  $color: variables.$color-accent
+) {
+  box-shadow: $h-offset $v-offset $blur $spread $color;
+}

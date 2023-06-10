@@ -19,7 +19,7 @@
     right: 20px;
     background-color: variables.$color-secondary;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: variables.$border-radius-base * 2;
     max-width: 30%;
 
     h3 {
@@ -67,7 +67,7 @@
       input {
         padding: 10px 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: variables.$border-radius-base;
         background-color: variables.$color-primary;
         color: variables.$color-white;
         font-size: variables.$font-size * 1.2;

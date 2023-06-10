@@ -19,7 +19,7 @@
 
 <body>
 
-  <header class="container">
+  <header class="container ">
     <div class="header">
       <h1>Site de Sherk</h1>
       <div class="container__logo">
@@ -64,9 +64,11 @@
   </header>
 
   <main>
-    <section class="carousel">
+    <section class="carousel container">
+      <div>
+        <span class="material-icons">chevron_left</span>
+      </div>
       <div class="carousel__container">
-        <!-- TODO changer img .webp pour jpg -->
         <div class="slider">
           <img src="./img/carousel/shrek-et-chat-potte-1200x500.jpg" alt="Shrek et sa clic" id="img-1">
           <img src="./img/carousel/shrek-roi-1200x500.webp" alt="Shrek avec une couronne de roi sur la tête" id="img-2">
@@ -79,13 +81,13 @@
           <a href="#img-3"></a>
           <a href="#img-4"></a>
         </div>
-
-        <!-- CSS smooth scroll -->
-
-
         <!-- TODO ?? lorsque resize plus petit que l'image que l'image se place au centre  -->
       </div>
+      <div>
+        <span class="material-icons">chevron_right</span>
+      </div>
     </section>
+
 
 
     <section class="container">
@@ -144,7 +146,8 @@
         <articles class="blog">
           <div class="blog__avatar"><img src="./img/avatars/shrek-avatar-100.jpg" alt="Avatar de l'ane"></div>
           <h2 class="blog__title">Clafoutis</h2>
-          <p class="blog__text">Tu sais ce que tout le monde aime ? Le clafoutis. T’as déjà rencontré quelqu’un à qui tu
+          <p class="blog__text">Tu sais ce que tout le monde aime ? Le clafoutis. T’as déjà rencontré quelqu’un à qui
+            tu
             dis : « fais
             péter le clafoutis
             ! », et qui te dit, « j’aime pas le clafoutis » ? Il n’y a rien de plus clafoutant que le clafoutis !</p>
@@ -199,7 +202,8 @@
 
         <div class="right">
           <h2 class="right__title">Des statistiques</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae enim cumque aliquam labore soluta explicabo
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae enim cumque aliquam labore soluta
+            explicabo
             inventore, quaerat impedit ea sit optio possimus eius nisi odit.</p>
           <div class="right__stats">
             <div>
@@ -225,7 +229,8 @@
       <h2 class="movies__title">Les film de Shreks</h2>
 
       <p class="movies__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi laboriosam
-        necessitatibus voluptate aspernatur iure qui, aperiam exercitationem laborum consectetur dolores, ullam, dolorem
+        necessitatibus voluptate aspernatur iure qui, aperiam exercitationem laborum consectetur dolores, ullam,
+        dolorem
         suscipit fugit culpa?</p>
 
       <div class="movies__container">

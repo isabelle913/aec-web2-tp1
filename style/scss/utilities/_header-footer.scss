@@ -77,7 +77,7 @@ footer {
     &__social {
       img {
         width: 20px;
-        border-radius: 4px;
+        border-radius: variables.$border-radius-base / 2;
         cursor: pointer;
       }
     }
@@ -95,10 +95,15 @@ footer {
     }
   }
 }
-
+@media screen and (max-width: 1200px) {
+  .header {
+    margin: 25px 10px 40px 10px;
+  }
+}
 @media screen and (max-width: 950px) {
   .header {
     flex-direction: column;
+    margin: 25px 0 40px 0;
 
     .container__logo {
       text-align: center;

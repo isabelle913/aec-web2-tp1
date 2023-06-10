@@ -1,16 +1,22 @@
 @use "variables";
-
-// TODO ajouter petites flèches pour simuler
+@import "../mixins/flexRow";
+@import "../mixins/boxShadow";
 
 .carousel {
   ::-webkit-scrollbar {
     display: none;
   }
+  @include flexRow(space-between, center);
   padding: 0 10px;
+
+  .material-icons {
+    font-size: 50px;
+    color: variables.$color-primary;
+  }
 
   .carousel__container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 
     .slider {
@@ -19,14 +25,15 @@
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
-      box-shadow: 0 1.5rem 3rem -0.75rem variables.$color-accent;
-      border-radius: 0.5rem;
+      @include boxShadow(0, 1.5rem, 3rem, -0.75rem);
+      border-radius: variables.$border-radius-base;
       scrollbar-width: none;
 
       img {
         flex: 1 0 100%;
         scroll-snap-align: start;
         object-fit: cover;
+        width: 100%;
       }
     }
 
