@@ -1,13 +1,13 @@
 @use "variables";
+@use "general";
+@import "../mixins/flexRow";
 
 .slogan {
   background-color: variables.$color-secondary;
 
   .slogan__container {
-    display: flex;
-    justify-content: space-around;
+    @include flexRow(space-around, center);
     padding: 40px;
-    align-items: center;
 
     .slogan__text {
       font-family: lora;
@@ -17,18 +17,12 @@
     }
 
     .slogan__btn {
-      padding: 10px 20px;
-      background-color: variables.$color-primary;
-      font-size: variables.$font-size * 1.2;
-      color: variables.$color-white;
-      border-radius: variables.$border-radius-base;
-      cursor: pointer;
+      @extend %btn-base;
       flex-shrink: 0;
 
       &--red {
         color: red;
       }
-      // TODO faire hover sur les bouttons
     }
   }
 }

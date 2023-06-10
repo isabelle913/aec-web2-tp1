@@ -155,7 +155,7 @@ body {
   width: 200px;
 }
 
-.character__form .form__submit input {
+.slogan .slogan__container .slogan__btn, .character__form .form__submit input {
   padding: 10px 20px;
   border: none;
   border-radius: 0.5rem;
@@ -164,7 +164,7 @@ body {
   font-size: 19.2px;
   cursor: pointer;
 }
-.character__form .form__submit input:hover {
+.slogan .slogan__container .slogan__btn:hover, .character__form .form__submit input:hover {
   color: black;
   box-shadow: 0 1rem 1rem -0.75rem #6a5243;
   transform: scale(1.1);
@@ -646,8 +646,8 @@ footer .last-line__contact img {
 .slogan .slogan__container {
   display: flex;
   justify-content: space-around;
-  padding: 40px;
   align-items: center;
+  padding: 40px;
 }
 .slogan .slogan__container .slogan__text {
   font-family: lora;
@@ -656,12 +656,6 @@ footer .last-line__contact img {
   margin-right: 40px;
 }
 .slogan .slogan__container .slogan__btn {
-  padding: 10px 20px;
-  background-color: #91a644;
-  font-size: 19.2px;
-  color: #fff;
-  border-radius: 0.5rem;
-  cursor: pointer;
   flex-shrink: 0;
 }
 .slogan .slogan__container .slogan__btn--red {

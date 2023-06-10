@@ -45,7 +45,7 @@
       @include flexRow(end);
 
       input {
-        @extend %input-submit-base;
+        @extend %btn-base;
       }
     }
   }
