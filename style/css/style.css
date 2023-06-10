@@ -5,28 +5,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:wght@200;300;400;500;600;700;800&display=swap");
 .blogs {
   padding: 25px 0;
+  text-align: center;
 }
 .blogs__title {
-  text-align: center;
   font-size: 32px;
   padding: 25px 0;
 }
 .blogs__description {
   width: 60%;
   font-size: 16px;
-  text-align: center;
   margin: 0 auto;
   padding-bottom: 25px;
 }
 .blogs__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: space-between;
 }
 .blogs__container .blog {
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   padding: 10px;
   row-gap: 20px;
 }
@@ -39,9 +40,6 @@
   width: 100%;
   border-radius: 50%;
 }
-.blogs__container .blog__text {
-  text-align: center;
-}
 .blogs__container .blog__author {
   align-self: flex-end;
 }
@@ -53,8 +51,8 @@
 }
 .carousel {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: space-between;
   padding: 0 10px;
 }
 .carousel ::-webkit-scrollbar {
@@ -206,8 +204,8 @@ body {
 }
 .character__form .form__submit {
   display: flex;
-  justify-content: end;
-  align-items: strech;
+  justify-content: center;
+  align-items: end;
 }
 @media screen and (max-width: 1200px) {
   .character {
@@ -428,8 +426,8 @@ footer .menu__link a, .header .menu__link a {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: strech;
+  justify-content: center;
+  align-items: space-between;
   margin: 25px 0 40px 0;
 }
 .header h1 {
@@ -438,7 +436,7 @@ footer .menu__link a, .header .menu__link a {
 .header .menu {
   display: flex;
   justify-content: center;
-  align-items: strech;
+  align-items: center;
   margin: 25px 0;
 }
 .header .menu__link {
@@ -461,12 +459,12 @@ footer {
 footer .container__logo {
   display: flex;
   justify-content: center;
-  align-items: strech;
+  align-items: center;
 }
 footer .menu {
   display: flex;
   justify-content: center;
-  align-items: strech;
+  align-items: center;
   margin: 25px 0;
 }
 footer .menu__link {
@@ -487,8 +485,8 @@ footer .separator {
 }
 footer .last-line {
   display: flex;
-  justify-content: space-between;
-  align-items: strech;
+  justify-content: center;
+  align-items: space-between;
   margin: 25px 0;
 }
 footer .last-line__social img {
@@ -498,8 +496,8 @@ footer .last-line__social img {
 }
 footer .last-line__contact {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 footer .last-line__contact--phone {
   font-size: 0.9rem;
@@ -604,8 +602,8 @@ footer .last-line__contact img {
 }
 .movies__container {
   display: flex;
-  justify-content: space-between;
-  align-items: strech;
+  justify-content: center;
+  align-items: space-between;
 }
 .movies__container .movie {
   flex-basis: 20%;
@@ -645,8 +643,8 @@ footer .last-line__contact img {
 }
 .slogan .slogan__container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: space-around;
   padding: 40px;
 }
 .slogan .slogan__container .slogan__text {

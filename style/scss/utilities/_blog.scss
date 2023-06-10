@@ -1,10 +1,13 @@
 @use "variables";
 @import "../mixins/boxShadow";
+@import "../mixins/flexRow";
+@import "../mixins/flexColumn";
 
 .blogs {
   padding: 25px 0;
+  text-align: center;
+
   &__title {
-    text-align: center;
     font-size: variables.$font-size * 2;
     padding: 25px 0;
   }
@@ -12,20 +15,16 @@
   &__description {
     width: 60%;
     font-size: variables.$font-size;
-    text-align: center;
     margin: 0 auto;
     padding-bottom: 25px;
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @include flexRow(space-between);
 
     .blog {
       flex-basis: 30%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexColumn(center);
       padding: 10px;
       row-gap: 20px;
 
@@ -40,9 +39,6 @@
         }
       }
 
-      &__text {
-        text-align: center;
-      }
       &__author {
         align-self: flex-end;
       }
