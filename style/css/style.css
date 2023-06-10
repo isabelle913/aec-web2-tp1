@@ -590,7 +590,6 @@ footer .last-line__contact img {
     margin: 0;
   }
 }
-/*******  section movies  *******/
 .movies {
   padding: 40px 0;
 }
@@ -614,10 +613,11 @@ footer .last-line__contact img {
 .movies__container .movie {
   flex-basis: 20%;
   display: flex;
-  box-shadow: 0 1.5rem 3rem -0.75rem #6a5243;
-  border-radius: 0.5rem;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 1.5rem 3rem -0.75rem #6a5243;
+  border-radius: 0.5rem;
   padding: 20px 10px 10px 10px;
   row-gap: 20px;
 }
@@ -638,8 +638,14 @@ footer .last-line__contact img {
     gap: 40px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .movies__container {
+    padding: 20px;
+  }
+}
 @media screen and (max-width: 850px) {
   .movies__container {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
   }
