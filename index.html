@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- TODO -->
+<!-- Possiblement faire un shrek qui apparait au défilement -->
+<!-- https://www.youtube.com/watch?v=2decTjcdDKo&ab_channel=Grafikart.fr -->
+
 
 <head>
   <meta charset="utf-8">
@@ -16,45 +20,47 @@
 <body>
 
   <header class="container">
-    <h1>Site de Sherk</h1>
-    <div class="container__logo">
-      <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
-    </div>
+    <div class="header">
+      <h1>Site de Sherk</h1>
+      <div class="container__logo">
+        <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
+      </div>
 
-    <nav class="menu">
-      <ul>
-        <li class="menu__link">
-          <a href="#blog">
-            <span class="link__text">Blog</span>
-            <img class="link__img" src="./img/menu/blog.png" alt="Icône de bog" />
-          </a>
-        </li>
-        <li class="menu__link">
-          <a href="#gallery">
-            <span class="link__text">Galerie</span>
-            <img class="link__img" src="./img/menu/gallery.png" alt="Icône gallerie photo" />
-          </a>
-        </li>
-        <li class="menu__link">
-          <a href="#stats">
-            <span class="link__text">Statistiques</span>
-            <img class="link__img" src="./img/menu/stats.png" alt="Icône statistique" />
-          </a>
-        </li>
-        <li class="menu__link">
-          <a href="#movies">
-            <span class="link__text">Films</span>
-            <img class="link__img" src="./img/menu/movie-icon-2.png" alt="Icône film" />
-          </a>
-        </li>
-        <li class="menu__link">
-          <a href="#contact-us">
-            <span class="link__text">Contactez-nous</span>
-            <img class="link__img" src="./img/menu/contact-us.png" alt="Icône contactez-nous" />
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="menu">
+        <ul>
+          <li class="menu__link">
+            <a href="#blog">
+              <span class="link__text">Blog</span>
+              <img class="link__img" src="./img/menu/blog.png" alt="Icône de bog" />
+            </a>
+          </li>
+          <li class="menu__link">
+            <a href="#gallery">
+              <span class="link__text">Galerie</span>
+              <img class="link__img" src="./img/menu/gallery.png" alt="Icône gallerie photo" />
+            </a>
+          </li>
+          <li class="menu__link">
+            <a href="#stats">
+              <span class="link__text">Statistiques</span>
+              <img class="link__img" src="./img/menu/stats.png" alt="Icône statistique" />
+            </a>
+          </li>
+          <li class="menu__link">
+            <a href="#movies">
+              <span class="link__text">Films</span>
+              <img class="link__img" src="./img/menu/movie-icon-2.png" alt="Icône film" />
+            </a>
+          </li>
+          <li class="menu__link">
+            <a href="#contact-us">
+              <span class="link__text">Contactez-nous</span>
+              <img class="link__img" src="./img/menu/contact-us.png" alt="Icône contactez-nous" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -323,19 +329,42 @@
 
     <nav class="menu">
       <ul>
-        <!-- Prettier ignore -->
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">About us</span></a></li>
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">Feature</span></a></li>
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">Pricing</span></a></li>
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">Career</span></a></li>
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">FAQs</span></a></li>
-        <li class="menu__links"><a href="#"><span class="material-icons">chevron_right</span><span
-              class="menu__links--span">Privacy policy</span></a></li>
+        <li class="menu__link">
+          <a href="#">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">About us</span>
+          </a>
+        </li>
+        <li class="menu__link">
+          <a href="#">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">Feature</span>
+          </a>
+        </li>
+        <li class="menu__link">
+          <a href="#">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">Pricing</span>
+          </a>
+        </li>
+        <li class="menu__link">
+          <a href="#">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">Career</span>
+          </a>
+        </li>
+        <li class="menu__link">
+          <a href="#">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">FAQs</span>
+          </a>
+        </li>
+        <li class="menu__link ">
+          <a href="#" class="ellipsis">
+            <span class="material-icons">chevron_right</span>
+            <span class="menu__link--span">Privacy policy</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -368,8 +397,7 @@
       </div>
     </div>
   </footer>
-  <!-- Possiblement faire un shrek qui apparait au défilement -->
-  <!-- https://www.youtube.com/watch?v=2decTjcdDKo&ab_channel=Grafikart.fr -->
+
 </body>
 
 </html>

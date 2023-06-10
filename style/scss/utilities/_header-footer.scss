@@ -1,13 +1,14 @@
 @use "variables";
-@import "../mixins/flexAlign";
+@import "../mixins/flexRow";
+@import "../mixins/grid";
 
 %base-a {
   text-decoration-line: none;
   color: rgb(41, 39, 39);
 }
 
-header {
-  @include flexAlign(space-between);
+.header {
+  @include flexRow(space-between);
   margin: 25px 0 40px 0;
 
   h1 {
@@ -15,7 +16,7 @@ header {
   }
 
   .menu {
-    @include flexAlign(center);
+    @include flexRow(center);
     margin: 25px 0;
 
     &__link {
@@ -25,7 +26,6 @@ header {
       a {
         @extend %base-a;
         font-size: variables.$font-size * 1.3;
-        // scroll-behavior: smooth; TODO faire transition lente
 
         &:hover {
           border-bottom: variables.$border-primary;
@@ -41,21 +41,20 @@ footer {
   margin-top: 25px;
 
   .container__logo {
-    @include flexAlign(center);
+    @include flexRow(center);
   }
 
   .menu {
-    @include flexAlign(center);
+    @include flexRow(center);
     margin: 25px 0;
 
-    &__links {
+    &__link {
       display: inline-block;
 
       a {
-        display: flex;
-        align-items: flex-end;
         @extend %base-a;
         padding: 10px 10px;
+        display: flex;
       }
 
       span {
@@ -72,7 +71,7 @@ footer {
     border-top: variables.$separator;
   }
   .last-line {
-    @include flexAlign(space-between);
+    @include flexRow(space-between);
     margin: 25px 0;
 
     &__social {
@@ -83,9 +82,7 @@ footer {
       }
     }
     &__contact {
-      display: flex;
-      align-items: center;
-
+      @include flexRow(flex-start, center);
       &--phone {
         font-size: 0.9rem;
         margin-left: 0 !important;
@@ -100,7 +97,7 @@ footer {
 }
 
 @media screen and (max-width: 950px) {
-  header {
+  .header {
     flex-direction: column;
 
     .container__logo {
@@ -112,7 +109,7 @@ footer {
       margin: 40px 0;
 
       ul {
-        @include flexAlign(center, center);
+        @include flexRow(center, center);
         width: 100%;
       }
 
@@ -144,13 +141,11 @@ footer {
 @media screen and (max-width: 850px) {
   footer {
     .menu ul {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      @include grid(repeat(3, 1fr));
     }
 
     .last-line {
-      display: grid !important;
-      grid-template-columns: 2fr 1fr;
+      @include grid(2fr 1fr);
 
       &__author {
         grid-column: 1/2;
@@ -170,12 +165,17 @@ footer {
   }
 }
 
-// TODO corriger dernière ligne footer responsive du téléphone et courriel
 @media screen and (max-width: 550px) {
-  //footer {
-  //.last-line {
-  //&__contact {
-  //}
-  //}
-  //}
+  footer {
+    .last-line {
+      &__contact {
+        @include grid(30px 1fr);
+        align-items: flex-start;
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
 }

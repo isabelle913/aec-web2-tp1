@@ -1,7 +1,0 @@
-@mixin flexAlign($alignX: center, $alignY: strech) {
-  display: flex;
-  justify-content: $alignX;
-  align-items: $alignY;
-}
-
-// TODO ?? un mixin par fichier?

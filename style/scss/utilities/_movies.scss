@@ -1,5 +1,5 @@
 @use "variables";
-@import "../mixins/flexAlign";
+@import "../mixins/flexRow";
 
 /*******  section movies  *******/
 .movies {
@@ -20,7 +20,7 @@
   }
 
   &__container {
-    @include flexAlign(space-between);
+    @include flexRow(space-between);
     //display: flex;
     //justify-content: space-between;
 

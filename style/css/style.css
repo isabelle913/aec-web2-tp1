@@ -273,10 +273,6 @@ body {
   width: 200px;
 }
 
-section {
-  margin: 25px 0;
-}
-
 .gallery__container {
   display: grid;
   grid-template-columns: 1.5fr repeat(5, 1fr);
@@ -371,37 +367,37 @@ section {
     padding-left: 10%;
   }
 }
-footer .menu__links a, header .menu__link a {
+footer .menu__link a, .header .menu__link a {
   text-decoration-line: none;
   color: rgb(41, 39, 39);
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: strech;
   margin: 25px 0 40px 0;
 }
-header h1 {
+.header h1 {
   display: none;
 }
-header .menu {
+.header .menu {
   display: flex;
   justify-content: center;
   align-items: strech;
   margin: 25px 0;
 }
-header .menu__link {
+.header .menu__link {
   display: inline-block;
   padding: 10px 10px;
 }
-header .menu__link a {
+.header .menu__link a {
   font-size: 20.8px;
 }
-header .menu__link a:hover {
+.header .menu__link a:hover {
   border-bottom: 3px solid #91a644;
 }
-header .menu__link a img {
+.header .menu__link a img {
   display: none;
 }
 
@@ -419,18 +415,17 @@ footer .menu {
   align-items: strech;
   margin: 25px 0;
 }
-footer .menu__links {
+footer .menu__link {
   display: inline-block;
 }
-footer .menu__links a {
-  display: flex;
-  align-items: flex-end;
+footer .menu__link a {
   padding: 10px 10px;
+  display: flex;
 }
-footer .menu__links span {
+footer .menu__link span {
   font-size: 20px;
 }
-footer .menu__links--span:hover {
+footer .menu__link--span:hover {
   border-bottom: 3px solid #91a644;
 }
 footer .separator {
@@ -449,6 +444,7 @@ footer .last-line__social img {
 }
 footer .last-line__contact {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 footer .last-line__contact--phone {
@@ -461,36 +457,36 @@ footer .last-line__contact img {
 }
 
 @media screen and (max-width: 950px) {
-  header {
+  .header {
     flex-direction: column;
   }
-  header .container__logo {
+  .header .container__logo {
     text-align: center;
     margin-top: 20px;
   }
-  header .menu {
+  .header .menu {
     margin: 40px 0;
   }
-  header .menu ul {
+  .header .menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  header .menu__link {
+  .header .menu__link {
     background-color: #eeddac;
     flex-grow: 1;
     margin: 0 10px;
     border-radius: 10px;
   }
-  header .menu__link:hover {
+  .header .menu__link:hover {
     flex-grow: 2;
     background-color: #91a644;
   }
-  header .menu .link__text {
+  .header .menu .link__text {
     display: none;
   }
-  header .menu .link__img {
+  .header .menu .link__img {
     display: block;
     width: 30px;
     margin: 0 auto;
@@ -502,7 +498,7 @@ footer .last-line__contact img {
     grid-template-columns: repeat(3, 1fr);
   }
   footer .last-line {
-    display: grid !important;
+    display: grid;
     grid-template-columns: 2fr 1fr;
   }
   footer .last-line__author {
@@ -518,6 +514,16 @@ footer .last-line__contact img {
   footer .last-line__contact {
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 550px) {
+  footer .last-line__contact {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: flex-start;
+  }
+  footer .last-line__contact img {
+    margin: 0;
   }
 }
 /*******  section movies  *******/
