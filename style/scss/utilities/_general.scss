@@ -1,4 +1,5 @@
 @use "variables";
+@import "../mixins/boxShadow";
 
 *,
 ::before,
@@ -18,11 +19,26 @@ body {
 }
 
 .container {
-  //width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
   width: 200px;
+}
+%input-submit-base {
+  padding: 10px 20px;
+  border: none;
+  border-radius: variables.$border-radius-base;
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
+  font-size: variables.$font-size * 1.2;
+  cursor: pointer;
+  // TODO faire hover sur les bouttons
+
+  &:hover {
+    color: black;
+    @include boxShadow(0, 1rem, 1rem, -0.75rem);
+    transform: scale(1.1);
+  }
 }
