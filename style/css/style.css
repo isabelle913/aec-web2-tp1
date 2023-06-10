@@ -153,7 +153,7 @@ body {
   width: 200px;
 }
 
-.stats .container .right__btn, .slogan .slogan__container .slogan__btn, .character__form .form__submit input {
+.stats .container .right__btn, .slogan .slogan__container .slogan__btn, .contact .contact__form .form__submit input, .character__form .form__submit input {
   padding: 10px 20px;
   border: none;
   border-radius: 0.5rem;
@@ -162,7 +162,7 @@ body {
   font-size: 19.2px;
   cursor: pointer;
 }
-.stats .container .right__btn:hover, .slogan .slogan__container .slogan__btn:hover, .character__form .form__submit input:hover {
+.stats .container .right__btn:hover, .slogan .slogan__container .slogan__btn:hover, .contact .contact__form .form__submit input:hover, .character__form .form__submit input:hover {
   color: black;
   box-shadow: 0 1rem 1rem -0.75rem #6a5243;
   transform: scale(1.1);
@@ -232,30 +232,30 @@ body {
 }
 .contact iframe {
   width: 100%;
-  height: 500px;
+  height: 600px;
   border: 0;
-}
-.contact__form {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  background-color: #eeddac;
-  padding: 10px;
   border-radius: 1rem;
-  max-width: 30%;
 }
-.contact__form h3 {
+.contact .contact__form {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  max-width: 30%;
+  padding: 10px;
+  background-color: #eeddac;
+  border-radius: 1rem;
+}
+.contact .contact__form h3 {
   margin: 10px 0;
 }
-.contact__form .form__group {
+.contact .contact__form .form__group {
   margin: 20px 0;
 }
-.contact__form .form__group .form__label--hidden {
+.contact .contact__form .form__group .form__label--hidden {
   display: none;
 }
-.contact__form .form__group input,
-.contact__form .form__group textarea {
+.contact .contact__form .form__group input,
+.contact .contact__form .form__group textarea {
   width: 100%;
   background-color: #eeddac;
   padding: 4px;
@@ -263,66 +263,60 @@ body {
   border-bottom: 3px solid #fff;
   outline: none;
 }
-.contact__form .form__group input:hover,
-.contact__form .form__group textarea:hover {
+.contact .contact__form .form__group input:hover,
+.contact .contact__form .form__group textarea:hover {
   outline: none;
   border-bottom: 3px solid #91a644;
 }
-.contact__form .form__group--row {
+.contact .contact__form .form__group--row {
   display: flex;
 }
-.contact__form .form__group--row .form__group--margin-right {
+.contact .contact__form .form__group--row .form__group--margin-right {
   margin-right: 10px;
 }
-.contact__form .form__submit {
+.contact .contact__form .form__submit {
   display: flex;
   justify-content: end;
+  align-items: strech;
 }
-.contact__form .form__submit input {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #91a644;
-  color: #fff;
-  font-size: 19.2px;
-  cursor: pointer;
-}
-
-/*******  Media Query  *******/
 @media screen and (max-width: 1300px) {
   .contact__form .form__group--row {
-    display: flex;
     flex-direction: column;
   }
   .contact__form .form__group--row .form__group--margin-right {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
   .contact__form .form__group--row .form__group--margin-top {
     margin-top: 20px;
   }
 }
-.contact__form {
-  position: static;
-  transform: none;
-  max-width: 80%;
-  margin: 20px auto;
+@media screen and (max-width: 1200px) {
+  .contact {
+    margin: 40px 20px;
+  }
 }
-.contact__form .form__group--row {
-  flex-direction: row;
-}
-.contact__form .form__group--row .form__group--margin-right {
-  margin-right: 10px;
-}
-.contact__form .form__group--row .form__group--margin-top {
-  margin-top: 0;
-}
-.contact__form .form__group--row .form__group--width {
-  flex-grow: 1;
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   .contact__form {
-    max-width: 100%;
+    position: static !important;
+    max-width: 80% !important;
+    margin: 20px auto;
+  }
+  .contact__form .form__group--row {
+    flex-direction: row;
+  }
+  .contact__form .form__group--row .form__group--margin-right {
+    margin-right: 10px !important;
+  }
+  .contact__form .form__group--row .form__group--margin-top {
+    margin-top: 0;
+  }
+  .contact__form .form__group--row .form__group--width {
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contact__form {
+    max-width: 100% !important;
   }
 }
 .gallery__container {

@@ -1,6 +1,6 @@
 @use "variables";
-
-// TODO réparer contact
+@use "general";
+@import "../mixins/flexRow";
 
 .contact {
   position: relative;
@@ -8,23 +8,22 @@
 
   iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border: 0;
+    border-radius: variables.$border-radius-base * 2;
   }
 
-  &__form {
+  .contact__form {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 50px;
     right: 20px;
-    background-color: variables.$color-secondary;
-    padding: 10px;
-    border-radius: variables.$border-radius-base * 2;
     max-width: 30%;
+    padding: 10px;
+    background-color: variables.$color-secondary;
+    border-radius: variables.$border-radius-base * 2;
 
     h3 {
       margin: 10px 0;
-      //font-size: 40px;
     }
 
     .form__group {
@@ -61,33 +60,22 @@
     }
 
     .form__submit {
-      display: flex;
-      justify-content: end;
+      @include flexRow(end);
 
       input {
-        padding: 10px 20px;
-        border: none;
-        border-radius: variables.$border-radius-base;
-        background-color: variables.$color-primary;
-        color: variables.$color-white;
-        font-size: variables.$font-size * 1.2;
-        cursor: pointer;
-        // TODO faire hover sur les bouttons
+        @extend %btn-base;
       }
     }
   }
 }
 
-/*******  Media Query  *******/
-
 @media screen and (max-width: 1300px) {
   .contact__form {
     .form__group--row {
-      display: flex;
       flex-direction: column;
 
       .form__group--margin-right {
-        margin-right: 0;
+        margin-right: 0 !important;
       }
       .form__group--margin-top {
         margin-top: 20px;
@@ -96,29 +84,36 @@
   }
 }
 
-.contact__form {
-  position: static;
-  transform: none;
-  max-width: 80%;
-  margin: 20px auto;
+@media screen and (max-width: 1200px) {
+  .contact {
+    margin: 40px 20px;
+  }
+}
 
-  .form__group--row {
-    flex-direction: row;
+@media screen and (max-width: 1000px) {
+  .contact__form {
+    position: static !important;
+    max-width: 80% !important;
+    margin: 20px auto;
 
-    .form__group--margin-right {
-      margin-right: 10px;
-    }
-    .form__group--margin-top {
-      margin-top: 0;
-    }
-    .form__group--width {
-      flex-grow: 1;
+    .form__group--row {
+      flex-direction: row;
+
+      .form__group--margin-right {
+        margin-right: 10px !important;
+      }
+      .form__group--margin-top {
+        margin-top: 0;
+      }
+      .form__group--width {
+        flex-grow: 1;
+      }
     }
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .contact__form {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }
