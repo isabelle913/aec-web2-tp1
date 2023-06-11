@@ -108,8 +108,6 @@
       </div>
     </section>
 
-
-
     <section class="slogan">
       <div class="container slogan__container">
         <p class="slogan__text">C'est ma princesse, allez vous en chercher une autre!</p>
@@ -280,8 +278,6 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63269.820298437015!2d-71.1871256076971!3d45.50690928648346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb713c7693858b9%3A0xd2d9a11c5b28acb1!2sMar%C3%A9cage-des-Scots%20Regional%20Park!5e0!3m2!1sfr!2sca!4v1684494730514!5m2!1sfr!2sca"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <!-- width="600" height="450" -->
-
 
       <form class="contact__form" id="form" action="confirmation.html" onsubmit="return validateForm()" novalidate>
         <h3>Contactez-nous</h3>
@@ -290,14 +286,14 @@
         <div class="form__group form__group--row">
 
           <div class="form__group--width  input-control form__group--margin-right">
-            <label class="form__label form__label--hidden" for="LastName">Nom de famille</label>
-            <input type="text" id="LastName" name="LastName" placeholder="Nom de famille">
+            <label class="form__label form__label--hidden" for="lastName">Nom de famille</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Nom de famille" maxlength="40">
             <div class="error-message"></div>
           </div>
 
           <div class="form__group--width input-control form__group--margin-top">
             <label class="  form__label form__label--hidden" for="firstName">Prénom</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Prénom">
+            <input type="text" id="firstName" name="firstName" placeholder="Prénom" maxlength="40">
             <div class="error-message"></div>
           </div>
 
@@ -305,21 +301,20 @@
 
         <div class="form__group input-control">
           <label class="form__label form__label--hidden" for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email">
+          <input type="email" id="email" name="email" placeholder="Email" maxlength="50">
           <div class="error-message"></div>
         </div>
 
         <div class="form__group input-control">
           <label class="form__label form__label--hidden" for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Message"></textarea>
+          <textarea id="message" name="message" placeholder="Message" maxlength="250"></textarea>
           <div class="error-message"></div>
         </div>
 
         <div class="form__submit">
           <input type="submit" value="Soumettre">
         </div>
-        <!-- TODO terminer validation -->
-        <!-- TODO faire page html confirmation ou message dans cette page -->
+
       </form>
 
 

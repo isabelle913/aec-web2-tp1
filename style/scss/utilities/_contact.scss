@@ -66,6 +66,22 @@
         @extend %btn-base;
       }
     }
+
+    .input-control.succes input,
+    .input-control.succes textarea {
+      border-color: variables.$color-primary;
+    }
+    .input-control.error input,
+    .input-control.error textarea {
+      border-color: variables.$color-error;
+    }
+    .input-control .error-message {
+      color: #ff3860;
+      font-size: 12px;
+      height: 16px;
+      padding-left: 3px;
+      padding-top: 3px;
+    }
   }
 }
 

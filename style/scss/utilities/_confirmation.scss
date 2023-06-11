@@ -1,0 +1,31 @@
+@use "variables";
+@use "general";
+@import "../mixins/flexColumn";
+
+.confirmation {
+  background-color: variables.$color-secondary;
+  height: 50vh;
+  margin-bottom: 40px;
+
+  .confirmation__container {
+    @include flexColumn(center, space-around);
+    padding: 40px;
+    height: 100%;
+
+    .confirmation__text {
+      font-family: lora;
+      font-size: variables.$font-size * 2.5;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .confirmation__btn {
+      @extend %btn-base;
+
+      a {
+        color: variables.$color-white;
+        text-decoration: none;
+      }
+    }
+  }
+}

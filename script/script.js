@@ -1,57 +1,57 @@
 const form = document.querySelector("#form");
-const userName = document.querySelector("#userName");
-const userEmail = document.querySelector("#userEmail");
-const password = document.querySelector("#password");
-const passwordConfirm = document.querySelector("#passwordConfirm");
-const errorMsg = document.querySelector(".errorMsg");
+const lastName = document.querySelector("#lastName");
+const firstName = document.querySelector("#firstName");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const errorMsg = document.querySelector(".error-message");
 
 const validateForm = () => {
-  let noError = false;
-  let firstPsw = false;
+  let noError = [];
 
-  // Valider userName
-  if (userName.value.trim() === "") {
-    setError(userName, "Veuillez inscrire votre nom d'utilisateur");
-    noError = false;
+  // Valider lastName
+  if (lastName.value.trim() === "") {
+    setError(lastName, "Veuillez inscrire votre nom de famille");
+    noError.push(false);
   } else {
-    setSuccess(userName);
+    setSuccess(lastName);
+    noError.push(true);
+  }
+  // Valider firstName
+  if (firstName.value.trim() === "") {
+    setError(firstName, "Veuillez inscrire votre prénom");
+    noError.push(false);
+  } else {
+    setSuccess(firstName);
+    noError.push(true);
   }
 
   // valider courriel
-  if (userEmail.value.trim() === "") {
-    setError(userEmail, "Veuillez inscrire un courriel");
-    noError = false;
-  } else if (!validateEmail(userEmail.value.trim())) {
-    setError(userEmail, "Veuillez inscrire un courriel valide");
-    noError = false;
+  if (email.value.trim() === "") {
+    setError(email, "Veuillez inscrire votre courriel");
+    noError.push(false);
+  } else if (!validateEmail(email.value.trim())) {
+    setError(email, "Veuillez inscrire un courriel valide");
+    noError.push(false);
   } else {
-    setSuccess(userEmail);
+    setSuccess(email);
+    noError.push(true);
   }
 
-  // valider courriel
-  if (password.value.trim() === "") {
-    setError(password, "Veuillez inscrire un mot de passe");
-    noError = false;
-  } else if (password.value.trim().length < 8) {
-    setError(password, "Votre courriel doit contenir au moins 8 caractères");
-    noError = false;
+  // Valider message
+  if (message.value.trim() === "") {
+    setError(message, "Veuillez inscrire votre message");
+    noError.push(false);
   } else {
-    setSuccess(password);
-    firstPsw = true;
+    setSuccess(message);
+    noError.push(true);
   }
 
-  if (!firstPsw) {
-    setError(passwordConfirm, "Ce mot de passe ne correspond pas");
-    noError = false;
-  } else if (password.value.trim() !== passwordConfirm.value.trim()) {
-    setError(passwordConfirm, "Ce mot de passe ne correspond pas");
-    noError = false;
+  if (noError.length === 4 && !noError.includes(false)) {
+    console.log(4);
+    return true;
   } else {
-    setSuccess(passwordConfirm);
-    noError = true;
+    return false;
   }
-
-  return noError;
 };
 
 const setError = (element, message) => {
