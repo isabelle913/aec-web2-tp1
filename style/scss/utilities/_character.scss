@@ -34,7 +34,8 @@
         border-radius: variables.$border-radius-base;
         outline: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
           outline: none;
           border: variables.$border-primary;
         }

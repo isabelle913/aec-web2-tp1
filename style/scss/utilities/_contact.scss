@@ -44,7 +44,8 @@
         border-bottom: variables.$border-white;
         outline: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
           outline: none;
           border-bottom: variables.$border-primary;
         }

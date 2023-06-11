@@ -17,8 +17,11 @@
     }
 
     .slogan__btn {
-      @extend %btn-base;
       flex-shrink: 0;
+
+      button {
+        @extend %btn-base;
+      }
 
       &--red {
         color: red;

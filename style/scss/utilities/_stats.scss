@@ -2,6 +2,7 @@
 @use "general";
 @import "../mixins/flexRow";
 @import "../mixins/flexColumn";
+@import "../mixins/boxShadow";
 
 .stats {
   background-color: variables.$color-secondary;
@@ -51,13 +52,13 @@
         @extend %btn-base;
         align-self: flex-end;
         margin-top: 25px;
-
+        //TODO ?? focus sur ce boutton
         a {
           color: variables.$color-white;
           text-decoration: none;
         }
         a:hover {
-          color: black;
+          color: variables.$color-secondary;
         }
       }
     }

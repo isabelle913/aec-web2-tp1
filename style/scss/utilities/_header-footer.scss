@@ -92,6 +92,9 @@ footer {
         width: 15px;
         margin: 0 5px 0 10px;
       }
+      a {
+        @extend %base-a;
+      }
     }
   }
 }

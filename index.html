@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- TODO -->
-<!-- Possiblement faire un shrek qui apparait au défilement -->
-<!-- https://www.youtube.com/watch?v=2decTjcdDKo&ab_channel=Grafikart.fr -->
-
 
 <head>
   <meta charset="utf-8">
@@ -19,43 +15,46 @@
 
 <body>
 
+  <!-- TODO ?? Est-ce que la page de présentation peux être le readme -->
+  <a class="screen-reader-text" href="#content" aria-label="Aller au contenu principal" tabindex="-1">Aller au contenu
+    principal</a>
   <header class="container ">
     <div class="header">
       <h1>Site de Sherk</h1>
-      <a class="container__logo" href="index.html">
+      <a class="container__logo" href="index.html" aria-label="Logo de Shrek">
         <img src="img/shrek-logo-200x100.png" alt="Logo Shrek">
       </a>
 
       <nav class="menu">
         <ul>
           <li class="menu__link">
-            <a href="#blog">
+            <a href="#blog" aria-label="pour atteindre la section blog">
               <span class="link__text">Blog</span>
-              <img class="link__img" src="./img/menu/blog.png" alt="Icône de bog" />
+              <img class="link__img" src="./img/menu/blog.png" alt="Icône de bog">
             </a>
           </li>
           <li class="menu__link">
-            <a href="#gallery">
+            <a href="#gallery" aria-label="pour atteindre la section gallerie">
               <span class="link__text">Galerie</span>
-              <img class="link__img" src="./img/menu/gallery.png" alt="Icône gallerie photo" />
+              <img class="link__img" src="./img/menu/gallery.png" alt="Icône gallerie photo">
             </a>
           </li>
           <li class="menu__link">
-            <a href="#stats">
+            <a href="#stats" aria-label="pour atteindre la section des statistiques">
               <span class="link__text">Statistiques</span>
-              <img class="link__img" src="./img/menu/stats.png" alt="Icône statistique" />
+              <img class="link__img" src="./img/menu/stats.png" alt="Icône statistique">
             </a>
           </li>
           <li class="menu__link">
-            <a href="#movies">
+            <a href="#movies" aria-label="pour atteindre la section des films">
               <span class="link__text">Films</span>
-              <img class="link__img" src="./img/menu/movie-icon-2.png" alt="Icône film" />
+              <img class="link__img" src="./img/menu/movie-icon-2.png" alt="Icône film">
             </a>
           </li>
           <li class="menu__link">
-            <a href="#contact-us">
+            <a href="#contact-us" aria-label="pour atteindre la section contactez-nous">
               <span class="link__text">Contactez-nous</span>
-              <img class="link__img" src="./img/menu/contact-us.png" alt="Icône contactez-nous" />
+              <img class="link__img" src="./img/menu/contact-us.png" alt="Icône contactez-nous">
             </a>
           </li>
         </ul>
@@ -63,7 +62,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <section class="carousel container">
       <div class="carousel__left--position">
         <span class="material-icons">chevron_left</span>
@@ -76,10 +75,10 @@
           <img src="./img/carousel/shrek-famille1200x500.jpg" alt="Shrek et sa famille" id="img-4">
         </div>
         <div class="slider__nav">
-          <a href="#img-1"></a>
-          <a href="#img-2"></a>
-          <a href="#img-3"></a>
-          <a href="#img-4"></a>
+          <a href="#img-1" aria-label="Voir image 1" tabindex="-1"></a>
+          <a href="#img-2" aria-label="Voir image 2" tabindex="-1"></a>
+          <a href="#img-3" aria-label="Voir image 3" tabindex="-1"></a>
+          <a href="#img-4" aria-label="Voir image 4" tabindex="-1"></a>
         </div>
       </div>
       <div class="carousel__right--position">
@@ -95,7 +94,7 @@
         <p class="character__text">Lorem Corporis Neque ab ad adipisicing amet aperiam aut consectetur cumque dolor
           elit. ipsum molestias perspiciatis porro quam qui? quibusdam sequi sit unde voluptatibus voluptatum.</p>
 
-        <form class="character__form" id="form" onsubmit="return validateForm()" novalidate>
+        <form class="character__form" id="formCharacter" onsubmit="return validateForm()" novalidate>
           <div class="form__group input-control">
             <label class="  form__label form__label--hidden" for="favoriteCharacter">Votre personnage préféré</label>
             <input type="text" id="favoriteCharacter" name="favoriteCharacter" placeholder="Votre personnage préféré">
@@ -112,7 +111,7 @@
       <div class="container slogan__container">
         <p class="slogan__text">C'est ma princesse, allez vous en chercher une autre!</p>
         <div class="slogan__btn">
-          <p>Match <span class="slogan__btn--red">♡</span> princesse</p>
+          <button>Match <span class="slogan__btn--red">♡</span> princesse</button>
         </div>
 
       </div>
@@ -127,7 +126,7 @@
 
       <div class="blogs__container">
 
-        <articles class="blog">
+        <div class="blog">
           <div class="blog__avatar">
             <img src="./img/avatars/ane-avatar-100.jpg" alt="Avatar de l'ane">
           </div>
@@ -138,9 +137,9 @@
             pet, tu serais déja mort !</p>
           <p class="blog__author">Ane et Shrek</p>
 
-        </articles>
-        <articles class="blog">
-          <div class="blog__avatar"><img src="./img/avatars/shrek-avatar-100.jpg" alt="Avatar de l'ane"></div>
+        </div>
+        <div class="blog">
+          <div class="blog__avatar"><img src="./img/avatars/shrek-avatar-100.jpg" alt="Avatar de Shrek"></div>
           <h2 class="blog__title">Clafoutis</h2>
           <p class="blog__text">Tu sais ce que tout le monde aime ? Le clafoutis. T’as déjà rencontré quelqu’un à qui
             tu
@@ -148,9 +147,9 @@
             péter le clafoutis
             ! », et qui te dit, « j’aime pas le clafoutis » ? Il n’y a rien de plus clafoutant que le clafoutis !</p>
           <p class="blog__author">Shrek</p>
-        </articles>
-        <articles class="blog">
-          <div class="blog__avatar"><img src="./img/avatars/fiona-avatar-100.jpg" alt="Avatar de l'ane"></div>
+        </div>
+        <div class="blog">
+          <div class="blog__avatar"><img src="./img/avatars/fiona-avatar-100.jpg" alt="Avatar de Fiona"></div>
           <h2 class="blog__title">Dragon</h2>
           <p class="blog__text">Vous n'avez point occis le dragon ?
           </p>
@@ -158,7 +157,7 @@
           </p>
           <p class="blog__author">Fiona et Shrek</p>
 
-        </articles>
+        </div>
 
       </div>
     </section>
@@ -213,7 +212,8 @@
 
           </div>
           <div class="right__btn">
-            <a href="https://www.dreamworks.com/movies/shrek" target="_blank">Pour en savoir plus</a>
+            <a href="https://www.dreamworks.com/movies/shrek" target="_blank"
+              aria-label="Pour ouvrir le site de Dreamworks">Pour en savoir plus</a>
           </div>
         </div>
 
@@ -231,7 +231,7 @@
 
       <div class="movies__container">
 
-        <articles class="movie">
+        <div class="movie">
           <div class="movie__title">
             <h2>Shrek</h2>
             <p class="movie__title--caption">2001</p>
@@ -239,8 +239,8 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
-        </articles>
-        <articles class="movie">
+        </div>
+        <div class="movie">
           <div class="movie__title">
             <h2>Shrek 2</h2>
             <p class="movie__title--caption">2004</p>
@@ -248,8 +248,8 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
-        </articles>
-        <articles class="movie">
+        </div>
+        <div class="movie">
           <div class="movie__title">
             <h2>Shrek le troisième</h2>
             <p class="movie__title--caption">2007</p>
@@ -257,8 +257,8 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
-        </articles>
-        <articles class="movie">
+        </div>
+        <div class="movie">
           <div class="movie__title">
             <h2>Shrek 4 : Il était une fin</h2>
             <p class="movie__title--caption">2010</p>
@@ -266,7 +266,7 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum quos nemo voluptatum blanditiis exercitationem temporibus sit earum
             ipsam ipsa?</p>
-        </articles>
+        </div>
 
       </div>
     </section>
@@ -274,40 +274,43 @@
     <section class="container contact" id="contact-us">
 
       <div class="contact__iframe">
+        <!-- TODO ?? lighthouse me dit que pas de title -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63269.820298437015!2d-71.1871256076971!3d45.50690928648346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb713c7693858b9%3A0xd2d9a11c5b28acb1!2sMar%C3%A9cage-des-Scots%20Regional%20Park!5e0!3m2!1sfr!2sca!4v1684494730514!5m2!1sfr!2sca"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          title="maraisShrek" name="maraisShrek" aria-label="Marais de Shrek" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
       </div>
 
-      <form class="contact__form" id="form" action="confirmation.html" onsubmit="return validateForm()" novalidate>
+      <form class="contact__form" id="formContact" action="confirmation.html" onsubmit="return validateForm()"
+        novalidate>
         <h3>Contactez-nous</h3>
         <p>Nous avons hâte d'avoir vos commentaires à propos de la famille de shrek</p>
 
         <div class="form__group form__group--row">
 
           <div class="form__group--width  input-control form__group--margin-right">
-            <label class="form__label form__label--hidden" for="lastName">Nom de famille</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Nom de famille" maxlength="40">
+            <label class="form__label form__label--hidden" for="lastName">Nom de famille *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Nom de famille *" maxlength="40">
             <div class="error-message"></div>
           </div>
 
           <div class="form__group--width input-control form__group--margin-top">
-            <label class="  form__label form__label--hidden" for="firstName">Prénom</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Prénom" maxlength="40">
+            <label class="  form__label form__label--hidden" for="firstName">Prénom *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Prénom *" maxlength="40">
             <div class="error-message"></div>
           </div>
 
         </div>
 
         <div class="form__group input-control">
-          <label class="form__label form__label--hidden" for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" maxlength="50">
+          <label class="form__label form__label--hidden" for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Email *" maxlength="50">
           <div class="error-message"></div>
         </div>
 
         <div class="form__group input-control">
-          <label class="form__label form__label--hidden" for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Message" maxlength="250"></textarea>
+          <label class="form__label form__label--hidden" for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Message *" maxlength="250"></textarea>
           <div class="error-message"></div>
         </div>
 
@@ -323,44 +326,44 @@
   </main>
 
   <footer class="container">
-    <a class="container__logo" href="index.html">
+    <a class="container__logo" href="index.html" aria-label="Logo Shrek">
       <img src="img/shrek-logo-200x100.png" alt="Logo Shrek" class="logo">
     </a>
 
     <nav class="menu">
       <ul>
         <li class="menu__link">
-          <a href="#">
+          <a href="index.html" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">About us</span>
           </a>
         </li>
         <li class="menu__link">
-          <a href="#">
+          <a href="index.html" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">Feature</span>
           </a>
         </li>
         <li class="menu__link">
-          <a href="#">
+          <a href="index.html" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">Pricing</span>
           </a>
         </li>
         <li class="menu__link">
-          <a href="#">
+          <a href="index.html" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">Career</span>
           </a>
         </li>
         <li class="menu__link">
-          <a href="#">
+          <a href="index.html" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">FAQs</span>
           </a>
         </li>
         <li class="menu__link ">
-          <a href="#" class="ellipsis">
+          <a href="index.html" class="ellipsis" aria-label="Retour au début">
             <span class="material-icons">chevron_right</span>
             <span class="menu__link--span">Privacy policy</span>
           </a>
@@ -386,11 +389,15 @@
 
         <img src="img/icons/telephone-25.png" alt="Icône téléphone" class="last-line__contact--phone">
 
-        <address href="tel:+15141234567" class="last-line__contact--phone">514-123-4567</address>
+        <address class="last-line__contact--phone">
+          <a href="tel:+15141234567" aria-label="Rjoindre ce téléphone">514-123-4567</a>
+        </address>
 
         <img src="img/icons/mail-25.png" alt="Icône courriel">
 
-        <address href="mailto:cegep@troisriviere.ca">cegep@troisrivieres.ca</address>
+        <address>
+          <a href="mailto:cegep@troisriviere.ca" aria-label="Envoyer un courriel">cegep@troisrivieres.ca</a>
+        </address>
 
 
       </div>

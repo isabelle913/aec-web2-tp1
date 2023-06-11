@@ -1,4 +1,4 @@
-@mixin flexRow($alignX: center, $alignY: strech) {
+@mixin flexRow($alignX: center, $alignY: stretch) {
   display: flex;
   justify-content: $alignX;
   align-items: $alignY;
