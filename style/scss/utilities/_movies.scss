@@ -26,7 +26,7 @@
 
     .movie {
       flex-basis: 20%;
-      @include flexColumn(center);
+      @include flexColumn(center, space-between);
       @include boxShadow(0, 1.5rem, 3rem, -0.75rem);
       border-radius: variables.$border-radius-base;
       padding: 20px 10px 10px 10px;
@@ -40,8 +40,14 @@
         }
       }
 
-      & &__text {
+      &__text {
         text-align: justify;
+      }
+
+      &__sociaux {
+        width: 100%;
+        @include flexRow(start);
+        gap: 10px;
       }
     }
   }

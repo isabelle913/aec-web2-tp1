@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="./style/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" href="favicon-shrek-32.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <script src="./script/script.js" defer></script>
 </head>
 
 <body>
-
-  <!-- TODO ?? Est-ce que la page de présentation peux être le readme -->
   <a class="screen-reader-text" href="#content" aria-label="Aller au contenu principal" tabindex="-1">Aller au contenu
     principal</a>
   <header class="container ">
@@ -64,6 +65,7 @@
 
   <main id="content">
     <section class="carousel container">
+      <h2 class="hidden">Caroussel photo</h2>
       <div class="carousel__left--position">
         <span class="material-icons">chevron_left</span>
       </div>
@@ -90,7 +92,7 @@
 
     <section class="container">
       <div class="character ">
-
+        <h2 class="hidden">Quel est votre personnage préféré?</h2>
         <p class="character__text">Lorem Corporis Neque ab ad adipisicing amet aperiam aut consectetur cumque dolor
           elit. ipsum molestias perspiciatis porro quam qui? quibusdam sequi sit unde voluptatibus voluptatum.</p>
 
@@ -109,6 +111,7 @@
 
     <section class="slogan">
       <div class="container slogan__container">
+        <h2 class="hidden">C'est ma princesse</h2>
         <p class="slogan__text">C'est ma princesse, allez vous en chercher une autre!</p>
         <div class="slogan__btn">
           <button>Match <span class="slogan__btn--red">♡</span> princesse</button>
@@ -166,6 +169,7 @@
 
     <section class="container" id="gallery">
       <div class="gallery__container">
+        <h2 class="hidden">Gallerie photo</h2>
         <div class="gallery__shrek-calin">
           <img src="./img/gallery/shrek-calin-876x500.jpg" alt="Shrek qui fait un calin à ses chums">
         </div>
@@ -211,7 +215,7 @@
             </div>
 
           </div>
-          <div class="right__btn">
+          <div class="right__btn" tabindex="0">
             <a href="https://www.dreamworks.com/movies/shrek" target="_blank"
               aria-label="Pour ouvrir le site de Dreamworks">Pour en savoir plus</a>
           </div>
@@ -239,6 +243,11 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
+          <div class="movie__sociaux">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
         <div class="movie">
           <div class="movie__title">
@@ -248,6 +257,11 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
+          <div class="movie__sociaux">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
         <div class="movie">
           <div class="movie__title">
@@ -257,6 +271,11 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum
             quos nemo voluptatum blanditiis exercitationem temporibus sit earum ipsam ipsa?</p>
+          <div class="movie__sociaux">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
         <div class="movie">
           <div class="movie__title">
@@ -266,15 +285,19 @@
           <p class="movie__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit mollitia
             consequuntur illum fugit veniam, harum quos nemo voluptatum blanditiis exercitationem temporibus sit earum
             ipsam ipsa?</p>
+          <div class="movie__sociaux">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
 
       </div>
     </section>
 
     <section class="container contact" id="contact-us">
-
+      <h2 class="hidden">Contactez-nous</h2>
       <div class="contact__iframe">
-        <!-- TODO ?? lighthouse me dit que pas de title -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63269.820298437015!2d-71.1871256076971!3d45.50690928648346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb713c7693858b9%3A0xd2d9a11c5b28acb1!2sMar%C3%A9cage-des-Scots%20Regional%20Park!5e0!3m2!1sfr!2sca!4v1684494730514!5m2!1sfr!2sca"
           title="maraisShrek" name="maraisShrek" aria-label="Marais de Shrek" allowfullscreen="" loading="lazy"

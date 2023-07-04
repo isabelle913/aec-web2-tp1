@@ -52,13 +52,15 @@
         @extend %btn-base;
         align-self: flex-end;
         margin-top: 25px;
-        //TODO ?? focus sur ce boutton
+
         a {
           color: variables.$color-white;
           text-decoration: none;
-        }
-        a:hover {
-          color: variables.$color-secondary;
+          &:hover,
+          &:focus {
+            color: variables.$color-secondary;
+            outline: 0;
+          }
         }
       }
     }

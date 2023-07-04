@@ -184,6 +184,10 @@ body {
   word-wrap: normal !important;
 }
 
+.hidden {
+  display: none;
+}
+
 .character {
   padding: 40px 0;
   max-width: 1000px;
@@ -665,7 +669,7 @@ footer .last-line__contact img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   box-shadow: 0 1.5rem 3rem -0.75rem #6a5243;
   border-radius: 0.5rem;
   padding: 20px 10px 10px 10px;
@@ -677,8 +681,15 @@ footer .last-line__contact img {
 .movies__container .movie__title--caption {
   font-size: 12.8px;
 }
-.movies__container .movie .movies__container .movie__text {
+.movies__container .movie__text {
   text-align: justify;
+}
+.movies__container .movie__sociaux {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  gap: 10px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -783,8 +794,9 @@ footer .last-line__contact img {
   color: #fff;
   text-decoration: none;
 }
-.stats .container .right__btn a:hover {
+.stats .container .right__btn a:hover, .stats .container .right__btn a:focus {
   color: #eeddac;
+  outline: 0;
 }
 
 @media screen and (max-width: 1300px) {
