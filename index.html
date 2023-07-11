@@ -19,6 +19,18 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Shrek app">
   <link rel="apple-touch-icon" href="./img/icons-manifest/shrek192.png">
+
+  <script src="./service-worker.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
+      });
+    }
+  </script>
   <script src="./script/script.js" defer></script>
 </head>
 
