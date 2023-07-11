@@ -5,20 +5,17 @@
     {
       "src": "/aec-web2-tp1/img/icons-manifest/shrek512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "/aec-web2-tp1/img/icons-manifest/shrek192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "/aec-web2-tp1/img/icons-manifest/shrek144.png",
       "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
   "start_url": "https://isabelle913.github.io/aec-web2-tp1/",
